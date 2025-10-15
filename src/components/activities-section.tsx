@@ -6,24 +6,14 @@ import Image from "next/image";
 
 const activities = [
   {
-    title: "Talleres de Memoria",
-    description: "Sesiones cognitivas diseñadas para mantener y mejorar la función cerebral.",
+    title: "Calendario de talleres y planes semanales",
+    description: "Descubre una agenda siempre renovada de talleres creativos, actividades recreativas y planes sociales diseñados para enriquecer cada semana con nuevas experiencias.",
     image: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?q=80&w=2072&auto=format&fit=crop"
   },
   {
-    title: "Ejercicios en Casa",
-    description: "Rutinas de actividad física adaptadas para realizar en el hogar sin riesgo.",
-    image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2070&auto=format&fit=crop"
-  },
-  {
-    title: "Actividades Recreativas",
-    description: "Juegos, música y actividades sociales que promueven el bienestar emocional.",
+    title: "Galería de fotos/videos",
+    description: "Revive los mejores momentos de nuestras actividades a través de fotos y videos destacados.",
     image: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=2070&auto=format&fit=crop"
-  },
-  {
-    title: "Terapia Ocupacional",
-    description: "Programas de terapia que ayudan a mantener la independencia en tareas diarias.",
-    image: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2078&auto=format&fit=crop"
   }
 ];
 
@@ -67,7 +57,7 @@ export function ActivitiesSection() {
         </div>
 
         {/* Activities Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-6xl mx-auto">
+        <div className={`grid md:grid-cols-2 ${activities.length < 2 ? 'lg:grid-cols-1' : 'md:grid-cols-2'} gap-6 mb-16 max-w-6xl mx-auto`}>
           {activities.map((activity, index) => (
             <Card 
               key={index} 
@@ -97,7 +87,7 @@ export function ActivitiesSection() {
         </div>
 
         {/* Stats Section */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
+        {/* <div className="grid md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className={`w-16 h-16 mx-auto mb-4 rounded-full ${stat.bgColor} flex items-center justify-center`}>
@@ -111,17 +101,17 @@ export function ActivitiesSection() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* CTA Button */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <Button 
             size="lg"
             className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8"
           >
             Calendario de Actividades
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

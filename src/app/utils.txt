@@ -1,0 +1,5 @@
+gris = rgba(202, 200, 191) #cac8bf
+azul = rgba(88, 108, 120) #586c78
+Terracota = rgba(216, 132, 95) #d8845f
+Sunset = rgba(221, 172, 140) #ddac8c
+amarillo = rgba(251, 231, 183) #fbe7b7
