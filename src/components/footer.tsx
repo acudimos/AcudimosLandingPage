@@ -1,12 +1,12 @@
 export function Footer() {
   return (
-    <footer className="bg-teal-900 text-white">
+    <footer className="bg-[#586c78] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-12 mb-8">
           {/* Brand Section */}
           <div>
             <h3 className="text-2xl font-bold mb-4">Acudimos</h3>
-            <p className="text-teal-100 leading-relaxed mb-6">
+            <p className="text-gray-100 leading-relaxed mb-6">
               Brindamos servicios especializados de cuidado domiciliario y acompañamiento para
               adultos mayores, combinando profesionalismo médico con calidez humana.
             </p>
@@ -65,7 +65,7 @@ export function Footer() {
               <li>
                 <a
                   href="#quienes-somos"
-                  className="text-teal-100 hover:text-white transition-colors inline-block"
+                  className="text-gray-100 hover:text-white transition-colors inline-block"
                 >
                   Quiénes Somos
                 </a>
@@ -73,7 +73,7 @@ export function Footer() {
               <li>
                 <a
                   href="#servicios"
-                  className="text-teal-100 hover:text-white transition-colors inline-block"
+                  className="text-gray-100 hover:text-white transition-colors inline-block"
                 >
                   Servicios
                 </a>
@@ -81,7 +81,7 @@ export function Footer() {
               <li>
                 <a
                   href="#sedes"
-                  className="text-teal-100 hover:text-white transition-colors inline-block"
+                  className="text-gray-100 hover:text-white transition-colors inline-block"
                 >
                   Sedes
                 </a>
@@ -89,7 +89,7 @@ export function Footer() {
               <li>
                 <a
                   href="#blog"
-                  className="text-teal-100 hover:text-white transition-colors inline-block"
+                  className="text-gray-100 hover:text-white transition-colors inline-block"
                 >
                   Blog
                 </a>
@@ -97,7 +97,7 @@ export function Footer() {
               <li>
                 <a
                   href="#contacto"
-                  className="text-teal-100 hover:text-white transition-colors inline-block"
+                  className="text-gray-100 hover:text-white transition-colors inline-block"
                 >
                   Contacto
                 </a>
@@ -109,7 +109,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Contacto</h3>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-teal-100">
+              <li className="flex items-center gap-3 text-gray-100">
                 <svg
                   className="w-5 h-5 flex-shrink-0"
                   fill="none"
@@ -125,7 +125,7 @@ export function Footer() {
                 </svg>
                 <span>+57 300 123 4567</span>
               </li>
-              <li className="flex items-center gap-3 text-teal-100">
+              <li className="flex items-center gap-3 text-gray-100">
                 <svg
                   className="w-5 h-5 flex-shrink-0"
                   fill="none"
@@ -141,7 +141,7 @@ export function Footer() {
                 </svg>
                 <span>info@acudimos.co</span>
               </li>
-              <li className="flex items-start gap-3 text-teal-100">
+              <li className="flex items-start gap-3 text-gray-100">
                 <svg
                   className="w-5 h-5 flex-shrink-0 mt-0.5"
                   fill="none"
@@ -172,7 +172,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-teal-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2 text-teal-100 text-sm">
+          <div className="flex items-center gap-2 text-gray-100 text-sm">
             <svg className="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"
@@ -185,13 +185,13 @@ export function Footer() {
           <div className="flex gap-6 text-sm">
             <a
               href="/terminos"
-              className="text-teal-100 hover:text-white transition-colors"
+              className="text-gray-100 hover:text-white transition-colors"
             >
               Términos y Condiciones
             </a>
             <a
               href="/privacidad"
-              className="text-teal-100 hover:text-white transition-colors"
+              className="text-gray-100 hover:text-white transition-colors"
             >
               Política de Privacidad
             </a>
