@@ -66,7 +66,7 @@ export function HeroSection() {
                 <div className="relative z-10 container mx-auto px-6 text-center">
                   {/* Badge */}
                   <div className="flex justify-center mb-8">
-                    <Badge className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-full text-sm font-normal">
+                    <Badge className="bg-[#d8845f] hover:bg-[#ddac8c] text-white px-4 py-2 rounded-full text-sm font-normal">
                       <Heart className="w-4 h-4 mr-2 inline" />
                       {slide.badge}
                     </Badge>
@@ -76,7 +76,7 @@ export function HeroSection() {
                   <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                     {slide.title}
                     <br />
-                    <span className="text-teal-500">{slide.titleHighlight}</span>
+                    <span className="text-[#d8845f]">{slide.titleHighlight}</span>
                   </h1>
 
                   {/* Subheading */}
@@ -88,7 +88,7 @@ export function HeroSection() {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
                     <Button 
                       size="lg"
-                      className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-8 text-base"
+                      className="bg-[#d8845f] hover:bg-[#ddac8c] text-white rounded-full px-8 text-base"
                     >
                       Agendar Consulta
                       <ArrowRight className="w-5 h-5 ml-2" />
@@ -131,8 +131,8 @@ export function HeroSection() {
       {/* Floating Badge Bottom Right */}
       <div className="absolute bottom-8 right-8 z-20">
         <div className="bg-white rounded-full shadow-lg p-4 flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
-            <span className="text-teal-600 font-bold text-xl">O</span>
+          <div className="w-12 h-12 rounded-full bg-[#d8845f] flex items-center justify-center">
+            <span className="text-white font-bold text-xl">O</span>
           </div>
           <div className="pr-2">
             <div className="font-semibold text-sm text-gray-800">Profesionales Certificados</div>

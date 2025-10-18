@@ -5,37 +5,14 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 const locations = [
   {
-    city: "Cali",
-    status: "Operando",
-    statusColor: "bg-teal-100 text-teal-700",
-    address: "Av. 6 Norte #25-45, Barrio Granada",
-    phone: "+57 (2) 555-0123",
-    email: "cali@acudimos.co"
-  },
-  {
-    city: "Bogotá",
-    status: "Operando",
-    statusColor: "bg-teal-100 text-teal-700",
-    address: "Calle 93 #15-20, Zona Rosa",
-    phone: "+57 (1) 555-0456",
-    email: "bogota@acudimos.co"
-  },
-  {
     city: "Medellín",
-    status: "Próximamente",
-    statusColor: "bg-red-100 text-red-400",
-    address: "Carrera 43A #1-50, El Poblado",
-    phone: "+57 (4) 555-0789",
+    status: "Operando",
+    statusColor: "bg-teal-100 text-teal-700",
+    address: "direccion falsa 123, Medellín, Colombia",
+    phone: "+57 111222555",
     email: "medellin@acudimos.co"
   },
-  {
-    city: "Barranquilla",
-    status: "Próximamente",
-    statusColor: "bg-red-100 text-red-400",
-    address: "Calle 84 #51-45, Alto Prado",
-    phone: "+57 (5) 555-0321",
-    email: "barranquilla@acudimos.co"
-  }
+
 ];
 
 export function LocationsSection() {
@@ -54,7 +31,7 @@ export function LocationsSection() {
         </div>
 
         {/* Locations Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-5xl mx-auto">
+        <div className={`grid ${locations.length < 2 ? 'lg:grid-cols-1' : 'md:grid-cols-2'} gap-6 mb-16 max-w-5xl mx-auto`}>
           {locations.map((location, index) => (
             <Card 
               key={index} 
@@ -112,19 +89,10 @@ export function LocationsSection() {
 
         {/* Expansion Plan Section */}
         <div className="text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">
-            Plan de Expansión 2025
-          </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Estamos trabajando para llegar a más ciudades y brindar nuestros servicios a un mayor número
             de familias colombianas.
           </p>
-          <Button 
-            variant="outline"
-            className="border-2 border-teal-600 text-teal-600 hover:bg-teal-50 rounded-full px-8"
-          >
-            Solicitar Servicio en Mi Ciudad
-          </Button>
         </div>
       </div>
     </section>
