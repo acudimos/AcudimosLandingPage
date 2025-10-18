@@ -36,7 +36,7 @@ const blogPosts = [
 
 export function BlogSection() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="blog" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">

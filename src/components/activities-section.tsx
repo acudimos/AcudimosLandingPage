@@ -43,7 +43,7 @@ const stats = [
 
 export function ActivitiesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section id="activities" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">

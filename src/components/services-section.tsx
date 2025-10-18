@@ -137,7 +137,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -210,7 +210,7 @@ export function ServicesSection() {
           </p>
           <Button
             size="lg"
-            className="bg-[#d8845f] text-white hover:bg-[#ddac8c] rounded-full px-8"
+            className="w-full bg-[#d8845f] text-white hover:bg-[#ddac8c] rounded-full px-8 py-3 h-auto whitespace-normal"
           >
             Solicitar Consulta Gratuita
           </Button>

@@ -55,7 +55,7 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section id="testimonials" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-4">

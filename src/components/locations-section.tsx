@@ -17,7 +17,7 @@ const locations = [
 
 export function LocationsSection() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="locations" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">

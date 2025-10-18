@@ -1,9 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 export function ContactSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="contact" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
