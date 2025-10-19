@@ -1,67 +1,86 @@
 import { Card } from "@/components/ui/card";
+import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 export function PartnersSection() {
   const partners = [
     {
       id: 1,
-      name: "IPS",
-      logo: "/partners/ips.svg"
+      name: "Home Test Lab",
+      description: "Laboratorio de pruebas a domicilio",
+      url: "https://www.hometestlab.info/",
+      logo: "/partners/htl.png"
     },
     {
       id: 2,
-      name: "Aseguradoras",
-      logo: "/partners/aseguradoras.svg"
+      name: "Doctor Matt",
+      description: "Servicios médicos especializados",
+      url: "https://doctormatt.com.co/",
+      logo: "/partners/doctor-matt.png"
     },
     {
       id: 3,
-      name: "EPS",
-      logo: "/partners/eps.svg"
+      name: "Nursing Love Colombia",
+      description: "Cuidado profesional de enfermería",
+      url: "https://nursinglovecolombia.com/",
+      logo: "/partners/nursing-love.png"
     },
     {
       id: 4,
-      name: "Cooperativas",
-      logo: "/partners/cooperativas.svg"
-    },
-    {
-      id: 5,
-      name: "Instituciones",
-      logo: "/partners/instituciones.svg"
-    },
-    {
-      id: 6,
-      name: "ONG",
-      logo: "/partners/ong.svg"
+      name: "Armonía VIP",
+      description: "Servicios de bienestar y cuidado",
+      url: "https://armoniavip.com/",
+      logo: "/partners/armonia-vip.png"
     }
   ];
 
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Aliados Estratégicos
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Trabajamos de la mano con las mejores instituciones de salud y aseguradoras para garantizar un
+          <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+            Trabajamos de la mano con las mejores instituciones de salud para garantizar un
             servicio integral y de calidad.
           </p>
         </div>
 
         {/* Partners Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
           {partners.map((partner) => (
-            <Card 
-              key={partner.id} 
-              className="flex flex-col items-center justify-center p-8 hover:shadow-lg transition-shadow cursor-pointer bg-white border-gray-200"
+            <a
+              key={partner.id}
+              href={partner.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
             >
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-3">
-                <div className="w-10 h-10 bg-gray-300 rounded"></div>
-              </div>
-              <p className="text-sm font-medium text-gray-700 text-center">
-                {partner.name}
-              </p>
-            </Card>
+              <Card 
+                className="flex flex-col items-center justify-center p-8 h-full hover:shadow-lg hover:border-[#d8845f] transition-all cursor-pointer bg-white border-gray-200"
+              >
+                <div className="w-32 h-32 relative mb-4 flex items-center justify-center">
+                  <Image
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 text-center mb-2 group-hover:text-[#d8845f] transition-colors">
+                  {partner.name}
+                </h3>
+                <p className="text-sm text-gray-600 text-center mb-3">
+                  {partner.description}
+                </p>
+                <div className="flex items-center gap-1 text-[#d8845f] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                  Visitar sitio
+                  <ExternalLink className="w-4 h-4" />
+                </div>
+              </Card>
+            </a>
           ))}
         </div>
 
@@ -71,8 +90,8 @@ export function PartnersSection() {
             ¿Eres una institución de salud y quieres ser nuestro aliado?
           </p>
           <a 
-            href="#contacto" 
-            className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-2 transition-colors"
+            href="#contact" 
+            className="text-[#d8845f] hover:text-[#ddac8c] font-semibold inline-flex items-center gap-2 transition-colors"
           >
             Conoce nuestro programa de alianzas →
           </a>
