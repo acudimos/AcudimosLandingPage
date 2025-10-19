@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export function TestimonialsSection() {
   const testimonials = [
@@ -36,24 +37,6 @@ export function TestimonialsSection() {
     }
   ];
 
-  const stats = [
-    {
-      value: "98%",
-      label: "Satisfacción familiar",
-      sublabel: "De nuestras familias nos recomiendan"
-    },
-    {
-      value: "500+",
-      label: "Familias atendidas",
-      sublabel: "Confían en nuestro cuidado"
-    },
-    {
-      value: "24/7",
-      label: "Disponibilidad",
-      sublabel: "Siempre listos para ayudar"
-    }
-  ];
-
   return (
     <section id="testimonials" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
@@ -71,78 +54,10 @@ export function TestimonialsSection() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16 mt-12">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="bg-red-50/30 border-red-100 hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                {/* Quote Icon */}
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                  <svg
-                    className="w-6 h-6 text-red-400"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
-                  </svg>
-                </div>
-
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-5 h-5 text-red-400 fill-current"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                  ))}
-                </div>
-
-                {/* Quote */}
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  &quot;{testimonial.quote}&quot;
-                </p>
-
-                {/* Author */}
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-red-200 rounded-full flex items-center justify-center overflow-hidden">
-                    <span className="text-red-700 font-semibold text-lg">
-                      {testimonial.author.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="bg-gray-100 rounded-2xl py-12 px-8">
-          <h3 className="text-2xl font-bold text-center mb-8">
-            Resultados que hablan por sí solos
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold mb-2" style={{
-                  color: index === 0 ? '#1e3a8a' : index === 1 ? '#6b7280' : '#ef4444'
-                }}>
-                  {stat.value}
-                </div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">
-                  {stat.label}
-                </div>
-                <div className="text-sm text-gray-600">
-                  {stat.sublabel}
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="text-center mb-16 mt-12">
+            <Button className="bg-red-400 hover:bg-red-500 text-white rounded-full px-6 py-3 text-lg mx-auto cursor-pointer">
+              Revisa los testimonios
+            </Button>
         </div>
       </div>
     </section>

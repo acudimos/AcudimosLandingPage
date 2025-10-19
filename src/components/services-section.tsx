@@ -210,7 +210,7 @@ export function ServicesSection() {
           </p>
           <Button
             size="lg"
-            className="w-full bg-[#d8845f] text-white hover:bg-[#ddac8c] rounded-full px-8 py-3 h-auto whitespace-normal"
+            className="max-w-[300px] bg-[#d8845f] text-white hover:bg-[#ddac8c] rounded-full px-8 py-3 h-auto whitespace-normal"
           >
             Solicitar Consulta Gratuita
           </Button>
