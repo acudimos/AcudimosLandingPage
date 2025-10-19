@@ -46,10 +46,8 @@ export function Navbar() {
     { label: "Inicio", href: "#hero" },
     { label: "Quiénes Somos", href: "#about" },
     { label: "Servicios", href: "#services" },
-    { label: "Sedes", href: "#locations" },
-    { label: "Actividades", href: "#activities" },
     { label: "Blog", href: "#blog" },
-    { label: "Testimonios", href: "#testimonials" },
+    { label: "Preguntas Frecuentes", href: "#faq" },
     { label: "Contacto", href: "#contact" },
   ];
 
@@ -90,19 +88,21 @@ export function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <div className={`hidden lg:flex space-x-6 xl:space-x-8 ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
-            {menuItems.map((item) => (
-              <a 
-                key={item.label} 
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                className="font-medium hover:text-[#d8845f] transition-colors text-sm xl:text-base relative group cursor-pointer"
-              >
-                {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#d8845f] transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
+          {/* Desktop Navigation Links - Centered */}
+          <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
+            <div className={`flex space-x-6 xl:space-x-8 ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+              {menuItems.map((item) => (
+                <a 
+                  key={item.label} 
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="font-medium hover:text-[#d8845f] transition-colors text-sm xl:text-base relative group cursor-pointer whitespace-nowrap"
+                >
+                  {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#d8845f] transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Desktop Contact Button */}
