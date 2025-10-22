@@ -7,6 +7,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay"
 
@@ -45,7 +47,7 @@ export function HeroSection() {
         }}
         plugins={[
           Autoplay({
-            delay: 3000,
+            delay: 4000,
           }),
       ]}
         className="w-full h-screen"
@@ -105,27 +107,14 @@ export function HeroSection() {
                       Conocer Servicios
                     </Button>
                   </div>
-
-                  {/* Stats */}
-                  <div className="grid sm:landscape:hidden lg:landscape:grid grid-cols-3 gap-10 sm:gap-8 md:gap-12 lg:gap-16 landscape:gap-4 max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4">
-                    <div className="text-white">
-                      <div className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl landscape:text-4xl font-bold mb-2 sm:mb-3 md:mb-4">+500</div>
-                      <div className="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl landscape:text-[18px] text-gray-200 leading-tight">Familias atendidas</div>
-                    </div>
-                    <div className="text-white">
-                      <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl landscape:text-4xl font-bold mb-2 sm:mb-3 md:mb-4">24/7</div>
-                      <div className="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl landscape:text-[18px] text-gray-200 leading-tight">Disponibilidad</div>
-                    </div>
-                    <div className="text-white">
-                      <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl landscape:text-4xl font-bold mb-2 sm:mb-3 md:mb-4">15+</div>
-                      <div className="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl landscape:text-[18px] text-gray-200 leading-tight">Años experiencia</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
+
+        <CarouselPrevious className="left-4 bg-white/10 border-white/20 text-white hover:bg-white/20" />
+        <CarouselNext className="right-4 bg-white/10 border-white/20 text-white hover:bg-white/20" />
       </Carousel>
 
       {/* Floating Badge Bottom Right */}
