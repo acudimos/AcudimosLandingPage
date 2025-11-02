@@ -47,7 +47,7 @@ export function HeroSection() {
         }}
         plugins={[
           Autoplay({
-            delay: 4000,
+            delay: 6000,
           }),
       ]}
         className="w-full h-screen"

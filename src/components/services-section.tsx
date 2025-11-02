@@ -8,7 +8,8 @@ import {
   Brain,
   ShieldPlus,
   HeartPulse,
-  ArrowRight
+  ArrowRight,
+  Activity
 } from "lucide-react";
 
 const services = [
@@ -121,13 +122,14 @@ const services = [
     iconBg: "bg-gray-100"
   },
   {
-    icon: HeartPulse,
-    title: "Conexión Digital",
-    description: "Acortamos distancias y fortalecemos lazos familiares. Te ayudamos con videollamadas, enseñamos el uso de dispositivos y creamos diarios digitales para mantener viva la conexión con tus seres queridos.",
+    icon: Activity, 
+    title: "Estimulación y Talentos Compartidos",
+    description: "En Acudimos, creemos que cada persona tiene una historia y un talento que merece seguir vivo. Por eso, durante el acompañamiento, buscamos resaltar las capacidades, intereses y habilidades tanto del adulto como de su cuidador, convirtiendo cada visita en un espacio de disfrute, aprendizaje y conexión.",
     features: [
-      "Apoyo en videollamadas y redes sociales",
-      "Enseñanza básica de celular o tablet",
-      "Elaboración de un “diario digital” con fotos y mensajes de la familia"
+      "Manualidades, pintura y artes plásticas.",
+      "Cocina compartida o preparación de recetas familiares",
+      "Música, canto o instrumentos.",
+      "Cuidado de plantas o jardinería terapéutica."
     ],
     bgColor: "bg-red-50",
     iconColor: "text-red-400",
