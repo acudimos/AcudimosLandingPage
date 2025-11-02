@@ -43,31 +43,13 @@ export function Navbar() {
   }, []);
 
   const menuItems = [
-    { label: "Inicio", href: "#hero" },
-    { label: "Quiénes Somos", href: "#about" },
-    { label: "Servicios", href: "#services" },
-    { label: "Blog", href: "#blog" },
-    { label: "Preguntas Frecuentes", href: "#faq" },
-    { label: "Contacto", href: "#contact" },
+    { label: "Inicio", href: "/#hero" },
+    { label: "Quiénes Somos", href: "/#about" },
+    { label: "Servicios", href: "/#services" },
+    { label: "Blog", href: "/#blog" },
+    { label: "Preguntas Frecuentes", href: "/#faq" },
+    { label: "Contacto", href: "/#contact" },
   ];
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setIsMenuOpen(false);
-    
-    const targetId = href.substring(1); // Remover el '#'
-    const targetElement = document.getElementById(targetId);
-    
-    if (targetElement) {
-      const navbarHeight = 80; // Altura aproximada del navbar
-      const targetPosition = targetElement.offsetTop - navbarHeight;
-      
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth"
-      });
-    }
-  };
 
   return (
     <nav 
@@ -92,15 +74,14 @@ export function Navbar() {
           <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
             <div className={`flex space-x-6 xl:space-x-8 ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
               {menuItems.map((item) => (
-                <a 
+                <Link 
                   key={item.label} 
                   href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
                   className="font-medium hover:text-[#d8845f] transition-colors text-sm xl:text-base relative group cursor-pointer whitespace-nowrap"
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#d8845f] transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -138,18 +119,18 @@ export function Navbar() {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-[#586c78] to-[#3d4f59] backdrop-blur-lg shadow-2xl border-t border-white/10 max-h-[calc(100vh-80px)] overflow-y-auto">
             <div className="container mx-auto px-6 py-6 pb-8 space-y-2">
               {menuItems.map((item, index) => (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
                   className="block text-white font-medium py-2.5 px-4 hover:bg-[#d8845f]/20 hover:text-[#d8845f] rounded-lg transition-all duration-200 transform hover:translate-x-2 cursor-pointer"
                   style={{ 
                     animationDelay: `${index * 50}ms`,
                     animation: 'slideIn 0.3s ease-out forwards'
                   }}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               
               {/* Contact Button in Mobile Menu */}
