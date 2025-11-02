@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { HelpCircle, Plus, Minus } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -136,13 +137,14 @@ export function FAQSection() {
           <p className="text-gray-600 mb-4">
             ¿No encontraste la respuesta que buscabas?
           </p>
-          <a 
-            href="#contact"
-            className="inline-flex items-center gap-2 text-[#d8845f] font-semibold hover:text-[#ddac8c] transition-colors"
+          <Link
+            href="https://api.whatsapp.com/send?phone=573114063090"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#d8845f] hover:text-[#ddac8c] font-semibold inline-flex items-center gap-2 transition-colors"
           >
-            Contáctanos directamente
-            <HelpCircle className="w-5 h-5" />
-          </a>
+          Contáctanos Directamente <HelpCircle className="w-5 h-5" />
+          </Link>
         </div>
       </div>
     </section>

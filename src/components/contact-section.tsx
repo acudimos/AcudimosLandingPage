@@ -40,7 +40,7 @@ export function ContactSection() {
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-900 mb-1">Teléfono</h3>
                     <p className="text-sm text-gray-600 mb-2">Línea Nacional</p>
-                    <p className="text-lg font-semibold text-gray-900">+57 300 123 4567</p>
+                    <p className="text-lg font-semibold text-gray-900">+57 311 406 3090</p>
                     <p className="text-xs text-gray-500 mt-1">Disponible 24/7 para emergencias</p>
                   </div>
                 </div>
