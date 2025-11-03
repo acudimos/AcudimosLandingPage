@@ -111,7 +111,7 @@ export function Navbar() {
             size="lg"
           >
             <Phone className="w-4 h-4 mr-2" />
-            <span className="hidden xl:inline">Solicita tu acompañante hoy!</span>
+            <span className="hidden xl:inline">Solicita Tu Acompañante Hoy!</span>
             <span className="xl:hidden">Contactar</span>
           </Button>
 

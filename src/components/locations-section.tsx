@@ -7,36 +7,56 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "¿Qué servicios ofrece Acudimos?",
-    answer: "Ofrecemos servicios especializados de acompañamiento domiciliario que incluyen: acompañamiento en el hogar, compañía en actividades sociales y cotidianas, apoyo en bienestar y salud, y soporte a la familia. Nuestros profesionales brindan atención personalizada adaptada a las necesidades de cada persona."
+    question: "¿El servicio de cuidador es costoso?",
+    answer: "En Acudimos creemos que el cuidado digno debe estar al alcance de todos. Nuestros cuidadores son seleccionados y capacitados con rigor. Hemos hecho todo lo posible para que el servicio sea accesible y justo. Solo pagas por las horas efectivamente contratadas, sin cargos ocultos ni costos adicionales."
   },
   {
-    question: "¿Cuál es el horario de atención?",
-    answer: "Nuestro equipo de profesionales certificados está disponible las 24 horas del día, los 7 días de la semana. Nos adaptamos a las necesidades de cada familia para brindar el mejor servicio posible."
+    question: "¿El servicio de cuidado es considerado atención de salud domiciliaria?",
+    answer: "No. Nuestro servicio no reemplaza los servicios médicos o de enfermería. En Acudimos ofrecemos acompañamiento humano y apoyo cotidiano con técnicos y auxiliares en cuidado del adulto mayor o gerontología, entrenados para acompañar con empatía. Los servicios de salud deben solicitarse a través del sistema médico o medicina prepagada."
   },
   {
-    question: "¿Qué tipo de profesionales trabajan en Acudimos?",
-    answer: "Contamos con un equipo multidisciplinario de profesionales certificados con experiencia en el cuidado de adultos mayores y personas que requieren acompañamiento especial. Todos nuestros colaboradores están capacitados para brindar atención profesional y humana."
+    question: "¿Y si mi familiar necesita una inyección, curación, masaje, cambio de pañal o baño asistido?",
+    answer: "Esas actividades hacen parte de la atención clínica o de enfermería, por lo tanto no están incluidas en los servicios de Acudimos. Sin embargo, nuestros cuidadores pueden supervisar o acompañar durante estos procedimientos si los realiza un profesional autorizado o un familiar. Cuando detectamos la necesidad de atención médica, orientamos a la familia para contactar el servicio adecuado."
   },
   {
-    question: "¿Cómo puedo solicitar los servicios de Acudimos?",
-    answer: "Puedes contactarnos a través de nuestra página web, por teléfono o correo electrónico. Uno de nuestros asesores te atenderá para conocer tus necesidades específicas y diseñar un plan de cuidado personalizado."
+    question: "¿Qué servicios no ofrece Acudimos?",
+    answer: "Nos especializamos en acompañamiento humano y apoyo no médico. No ofrecemos servicios de enfermería, atención médica ni labores de aseo general o doméstico. Nuestro objetivo es brindar compañía significativa, estimulación y bienestar emocional, sin reemplazar funciones de salud o limpieza."
   },
   {
-    question: "¿Los servicios incluyen atención médica?",
-    answer: "Nuestros servicios se enfocan en acompañamiento y cuidado no médico. Podemos supervisar la toma de medicamentos, acompañar a citas médicas y monitorear signos vitales básicos, pero no realizamos procedimientos médicos especializados."
+    question: "¿Es seguro contratar a un cuidador de Acudimos?",
+    answer: "Tu tranquilidad es nuestra prioridad. Cada cuidador pasa por un proceso de selección riguroso: entrevista, visita domiciliaria, examen médico de ingreso y, en algunos casos, prueba de polígrafo. Garantizamos personas confiables, responsables y con verdadero sentido humano."
   },
   {
-    question: "¿En qué ciudades están disponibles?",
-    answer: "Actualmente operamos en Medellín y estamos expandiendo nuestros servicios a otras ciudades de Colombia. Contáctanos para conocer la disponibilidad en tu zona."
+    question: "¿El servicio es solo para personas mayores?",
+    answer: "Nuestros usuarios principalmente son adultos mayores, sin embargo acompañamos personas de todas las edades que necesiten apoyo temporal o continuo, por ejemplo durante una recuperación transitoria, post operatorios, mínima discapacidad o cualquier situación donde se requiera compañía confiable y cercana."
   },
   {
-    question: "¿Cuánto tiempo de experiencia tiene Acudimos?",
-    answer: "Tenemos más de 10 años de experiencia en el sector salud colombiano, entendiendo las necesidades de las familias y brindando servicios de calidad con calidez humana."
+    question: "¿Qué lugar ocupa el adulto mayor en Acudimos?",
+    answer: "El adulto mayor está en el centro de nuestro propósito. Sabemos que gran parte de quienes confían en nosotros buscan acompañamiento para sus seres queridos mayores, por eso nuestros cuidadores reciben formación especializada para atenderlos con respeto y calidez."
   },
   {
-    question: "¿Puedo cambiar el horario o el tipo de servicio?",
-    answer: "Sí, nuestros servicios son flexibles y se adaptan a tus necesidades. Puedes modificar el horario o el tipo de atención según los requerimientos de tu familia, previa coordinación con nuestro equipo."
+    question: "¿Dónde se ofrece el servicio?",
+    answer: "Principalmente en el hogar, porque creemos que el bienestar empieza en un entorno conocido y tranquilo. También acompañamos en hospitales, o cualquier lugar cuando la situación lo requiere."
+  },
+  {
+    question: "¿Puedo escoger el cuidador?",
+    answer: "Realizamos un proceso de selección muy cuidadoso para garantizar calidad, seguridad y empatía. Siempre escuchamos tus preferencias para asignar el cuidador que mejor se adapte a tu familia."
+  },
+  {
+    question: "¿Tienen cuidadores hombres y mujeres?",
+    answer: "Sí. Contamos con hombres y mujeres de distintas edades y creencias, todos comprometidos con el mismo propósito: acompañar con respeto, calidez y profesionalismo."
+  },
+  {
+    question: "¿Puedo solicitar que el cuidador respete una creencia religiosa específica?",
+    answer: "Claro. En Acudimos respetamos las creencias de cada persona, tanto de las familias como de nuestros cuidadores. Promovemos vínculos basados en el respeto mutuo y la empatía."
+  },
+  {
+    question: "¿La familia debe ofrecer alimentación al cuidador?",
+    answer: "No es obligatorio. Nuestros cuidadores llevan su propia alimentación."
+  },
+  {
+    question: "¿El transporte del cuidador está incluido en la tarifa?",
+    answer: "Sí, todo está incluido en la llegada del cuidador al sitio de ubicación del usuario, cualquier desplazamiento adicional del cuidador con el usuario será asumido por los familiares."
   }
 ];
 
@@ -65,49 +85,36 @@ export function LocationsSection() {
         </div>
 
         {/* FAQ Accordion */}
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-4xl mx-auto space-y-4 sm:grid sm:gap-3 sm:grid-cols-2">
           {faqs.map((faq, index) => (
-            <Card 
-              key={index} 
-              className="bg-white border border-gray-200 hover:shadow-md transition-shadow overflow-hidden"
+            <button
+              key={index}
+              onClick={() => toggleFAQ(index)}
+              className="bg-white border border-gray-200 hover:shadow-md transition-all rounded-lg overflow-hidden text-left p-6 flex flex-col items-start gap-4 hover:bg-gray-50 w-full h-full min-h-[120px]" // min-h para altura mínima
             >
-              <CardContent className="p-0">
-                {/* Question - Clickable Header */}
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full text-left p-6 flex items-start justify-between gap-4 hover:bg-gray-50 transition-colors"
-                >
-                  <div className="flex items-start gap-4 flex-1">
-                    <HelpCircle className="w-6 h-6 text-[#d8845f] flex-shrink-0 mt-0.5" />
-                    <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                      {faq.question}
-                    </h3>
-                  </div>
-                  <div className="flex-shrink-0">
-                    {openIndex === index ? (
-                      <Minus className="w-5 h-5 text-[#d8845f]" />
-                    ) : (
-                      <Plus className="w-5 h-5 text-gray-400" />
-                    )}
-                  </div>
-                </button>
-
-                {/* Answer - Collapsible Content */}
-                <div 
-                  className={`transition-all duration-300 ease-in-out ${
-                    openIndex === index 
-                      ? 'max-h-96 opacity-100' 
-                      : 'max-h-0 opacity-0'
-                  } overflow-hidden`}
-                >
-                  <div className="px-6 pb-6 pl-16">
-                    <p className="text-gray-600 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
+              <div className="flex items-center gap-4 w-full h-full"> {/* items-center para centrar verticalmente */}
+                <HelpCircle className="w-6 h-6 text-[#d8845f] flex-shrink-0" />
+                <h3 className="text-lg font-semibold text-gray-900 flex-1 text-left">
+                  {faq.question}
+                </h3>
+                <div className="flex-shrink-0">
+                  {openIndex === index ? (
+                    <Minus className="w-5 h-5 text-[#d8845f]" />
+                  ) : (
+                    <Plus className="w-5 h-5 text-gray-400" />
+                  )}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+
+              {/* Respuesta que aparece debajo */}
+              {openIndex === index && (
+                <div className="w-full pl-10 mt-2">
+                  <p className="text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              )}
+            </button>
           ))}
         </div>
 
@@ -116,7 +123,7 @@ export function LocationsSection() {
           <p className="text-gray-600 mb-4">
             ¿No encontraste la respuesta que buscabas?
           </p>
-          <a 
+          <a
             href="#contact"
             className="inline-flex items-center gap-2 text-[#d8845f] font-semibold hover:text-[#ddac8c] transition-colors"
           >
