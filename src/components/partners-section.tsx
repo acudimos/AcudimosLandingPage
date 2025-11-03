@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function PartnersSection() {
   const partners = [
@@ -9,29 +10,29 @@ export function PartnersSection() {
       name: "Home Test Lab",
       description: "Laboratorio de pruebas a domicilio",
       url: "https://www.hometestlab.info/",
-      logo: "/partners/htl.png"
+      logo: "/partners/htl.png",
     },
     {
       id: 2,
       name: "Doctor Matt",
       description: "Servicios médicos especializados",
       url: "https://doctormatt.com.co/",
-      logo: "/partners/doctor-matt.png"
+      logo: "/partners/doctor-matt.png",
     },
     {
       id: 3,
       name: "Nursing Love Colombia",
       description: "Cuidado profesional de enfermería",
       url: "https://nursinglovecolombia.com/",
-      logo: "/partners/nursing-love.png"
+      logo: "/partners/nursing-love.png",
     },
     {
       id: 4,
       name: "Armonía VIP",
       description: "Servicios de bienestar y cuidado",
       url: "https://armoniavip.com/",
-      logo: "/partners/armonia-vip.png"
-    }
+      logo: "/partners/armonia-vip.png",
+    },
   ];
 
   return (
@@ -43,8 +44,8 @@ export function PartnersSection() {
             Aliados Estratégicos
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-            Trabajamos de la mano con las mejores instituciones de salud para garantizar un
-            servicio integral y de calidad.
+            Trabajamos de la mano con las mejores instituciones de salud para
+            garantizar un servicio integral y de calidad.
           </p>
         </div>
 
@@ -58,9 +59,7 @@ export function PartnersSection() {
               rel="noopener noreferrer"
               className="group"
             >
-              <Card 
-                className="flex flex-col items-center justify-center p-8 h-full hover:shadow-lg hover:border-[#d8845f] transition-all cursor-pointer bg-white border-gray-200"
-              >
+              <Card className="flex flex-col items-center justify-center p-8 h-full hover:shadow-lg hover:border-[#d8845f] transition-all cursor-pointer bg-white border-gray-200">
                 <div className="w-32 h-32 relative mb-4 flex items-center justify-center">
                   <Image
                     src={partner.logo}
@@ -89,12 +88,14 @@ export function PartnersSection() {
           <p className="text-gray-600 mb-4">
             ¿Eres una institución de salud y quieres ser nuestro aliado?
           </p>
-          <a 
-            href="#contact" 
+          <Link
+            href="https://api.whatsapp.com/send?phone=573114063090"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[#d8845f] hover:text-[#ddac8c] font-semibold inline-flex items-center gap-2 transition-colors"
           >
-            Conoce nuestro programa de alianzas →
-          </a>
+            Contáctanos
+          </Link>
         </div>
       </div>
     </section>

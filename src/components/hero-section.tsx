@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay"
 
 const slides = [
@@ -47,7 +48,7 @@ export function HeroSection() {
         }}
         plugins={[
           Autoplay({
-            delay: 4000,
+            delay: 6000,
           }),
       ]}
         className="w-full h-screen"
@@ -96,15 +97,27 @@ export function HeroSection() {
                       size="lg"
                       className="bg-[#d8845f] hover:bg-[#ddac8c] text-white rounded-full px-6 sm:px-8 text-sm sm:text-base w-full sm:w-auto"
                     >
-                      Agendar Consulta
-                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 landscape:w-3 landscape:h-3" />
+                      <Link
+                        href="https://api.whatsapp.com/send?phone=573114063090"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center"
+                      >
+                        Agendar Servicio
+                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 landscape:w-3 landscape:h-3" />
+                      </Link>
                     </Button>
                     <Button 
                       size="lg"
                       variant="outline"
                       className="border-2 border-white text-white hover:bg-white/10 rounded-full px-6 sm:px-8 text-sm sm:text-base bg-transparent w-full sm:w-auto"
                     >
-                      Conocer Servicios
+                      <Link
+                        href="/#services"
+                        className="flex items-center hover:underline hover:text-white"
+                      >
+                        Conocer Servicios
+                      </Link>
                     </Button>
                   </div>
                 </div>

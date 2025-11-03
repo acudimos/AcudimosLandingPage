@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { HelpCircle, Plus, Minus } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -16,14 +17,14 @@ const faqs = [
   },
   {
     question: "¿Y si mi familiar necesita una inyección, curación, masaje, cambio de pañal o baño asistido?",
-    answer: "Esas actividades hacen parte de la atención clínica o de enfermería, por lo tanto no están incluidas en los servicios de Acudimos. Sin embargo, nuestros cuidadores pueden supervisar o acompañar durante estos procedimientos si los realiza un profesional autorizado o un familiar. Cuando detectamos la necesidad de atención médica, orientamos a la familia para contactar el servicio adecuado."
+    answer: "Esas actividades hacen parte de la atención clínica o de enfermería, por lo tanto no están incluidas en los servicios de Acudimos. Sin embargo, nuestros cuidadores pueden supervisar o acompañar durante estos procedimientos si los realiza un profesional autorizado o un familiar. Cuando detectamos la necesidad de atención médica, orientamos a la familia para contactar el servicio adecuado"
   },
   {
     question: "¿Qué servicios no ofrece Acudimos?",
     answer: "Nos especializamos en acompañamiento humano y apoyo no médico. No ofrecemos servicios de enfermería, atención médica ni labores de aseo general o doméstico. Nuestro objetivo es brindar compañía significativa, estimulación y bienestar emocional, sin reemplazar funciones de salud o limpieza."
   },
   {
-    question: "¿Es seguro contratar a un cuidador de Acudimos?",
+    question: " ¿Es seguro contratar a un cuidador de Acudimos?",
     answer: "Tu tranquilidad es nuestra prioridad. Cada cuidador pasa por un proceso de selección riguroso: entrevista, visita domiciliaria, examen médico de ingreso y, en algunos casos, prueba de polígrafo. Garantizamos personas confiables, responsables y con verdadero sentido humano."
   },
   {
@@ -52,7 +53,7 @@ const faqs = [
   },
   {
     question: "¿La familia debe ofrecer alimentación al cuidador?",
-    answer: "No es obligatorio. Nuestros cuidadores llevan su propia alimentación."
+    answer: "No es obligatorio. Nuestros cuidadores llevan su propia alimentación"
   },
   {
     question: "¿El transporte del cuidador está incluido en la tarifa?",
@@ -60,7 +61,7 @@ const faqs = [
   }
 ];
 
-export function LocationsSection() {
+export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -85,36 +86,49 @@ export function LocationsSection() {
         </div>
 
         {/* FAQ Accordion */}
-        <div className="max-w-4xl mx-auto space-y-4 sm:grid sm:gap-3 sm:grid-cols-2">
+        <div className="max-w-4xl mx-auto space-y-4">
           {faqs.map((faq, index) => (
-            <button
-              key={index}
-              onClick={() => toggleFAQ(index)}
-              className="bg-white border border-gray-200 hover:shadow-md transition-all rounded-lg overflow-hidden text-left p-6 flex flex-col items-start gap-4 hover:bg-gray-50 w-full h-full min-h-[120px]" // min-h para altura mínima
+            <Card 
+              key={index} 
+              className="bg-white border border-gray-200 hover:shadow-md transition-shadow overflow-hidden"
             >
-              <div className="flex items-center gap-4 w-full h-full"> {/* items-center para centrar verticalmente */}
-                <HelpCircle className="w-6 h-6 text-[#d8845f] flex-shrink-0" />
-                <h3 className="text-lg font-semibold text-gray-900 flex-1 text-left">
-                  {faq.question}
-                </h3>
-                <div className="flex-shrink-0">
-                  {openIndex === index ? (
-                    <Minus className="w-5 h-5 text-[#d8845f]" />
-                  ) : (
-                    <Plus className="w-5 h-5 text-gray-400" />
-                  )}
-                </div>
-              </div>
+              <CardContent className="p-0">
+                {/* Question - Clickable Header */}
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full text-left p-6 flex items-start justify-between gap-4 hover:bg-gray-50 transition-colors"
+                >
+                  <div className="flex items-start gap-4 flex-1">
+                    <HelpCircle className="w-6 h-6 text-[#d8845f] flex-shrink-0 mt-0.5" />
+                    <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                      {faq.question}
+                    </h3>
+                  </div>
+                  <div className="flex-shrink-0">
+                    {openIndex === index ? (
+                      <Minus className="w-5 h-5 text-[#d8845f]" />
+                    ) : (
+                      <Plus className="w-5 h-5 text-gray-400" />
+                    )}
+                  </div>
+                </button>
 
-              {/* Respuesta que aparece debajo */}
-              {openIndex === index && (
-                <div className="w-full pl-10 mt-2">
-                  <p className="text-gray-600 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                {/* Answer - Collapsible Content */}
+                <div 
+                  className={`transition-all duration-300 ease-in-out ${
+                    openIndex === index 
+                      ? 'max-h-96 opacity-100' 
+                      : 'max-h-0 opacity-0'
+                  } overflow-hidden`}
+                >
+                  <div className="px-6 pb-6 pl-16">
+                    <p className="text-gray-600 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
-              )}
-            </button>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
@@ -123,13 +137,14 @@ export function LocationsSection() {
           <p className="text-gray-600 mb-4">
             ¿No encontraste la respuesta que buscabas?
           </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 text-[#d8845f] font-semibold hover:text-[#ddac8c] transition-colors"
+          <Link
+            href="https://api.whatsapp.com/send?phone=573114063090"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#d8845f] hover:text-[#ddac8c] font-semibold inline-flex items-center gap-2 transition-colors"
           >
-            Contáctanos directamente
-            <HelpCircle className="w-5 h-5" />
-          </a>
+          Contáctanos Directamente <HelpCircle className="w-5 h-5" />
+          </Link>
         </div>
       </div>
     </section>

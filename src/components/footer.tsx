@@ -1,4 +1,15 @@
+import Link from "next/link";
+
 export function Footer() {
+  const menuItems = [
+    { label: "Inicio", href: "/#hero" },
+    { label: "Quiénes Somos", href: "/#about" },
+    { label: "Servicios", href: "/#services" },
+    { label: "Blog", href: "/#blog" },
+    { label: "Preguntas Frecuentes", href: "/#faq" },
+    { label: "Contacto", href: "/#contact" },
+  ];
+
   return (
     <footer className="bg-[#586c78] text-white">
       <div className="container mx-auto px-4 sm:px-7 py-12">
@@ -62,46 +73,16 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#quienes-somos"
-                  className="text-gray-100 hover:text-white transition-colors inline-block"
-                >
-                  Quiénes Somos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#servicios"
-                  className="text-gray-100 hover:text-white transition-colors inline-block"
-                >
-                  Servicios
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#sedes"
-                  className="text-gray-100 hover:text-white transition-colors inline-block"
-                >
-                  Sedes
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#blog"
-                  className="text-gray-100 hover:text-white transition-colors inline-block"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contacto"
-                  className="text-gray-100 hover:text-white transition-colors inline-block"
-                >
-                  Contacto
-                </a>
-              </li>
+              {menuItems.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-100 hover:text-white transition-colors inline-block"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -123,7 +104,7 @@ export function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>+57 300 123 4567</span>
+                <span>+57 311 406 3090</span>
               </li>
               <li className="flex items-center gap-3 text-gray-100">
                 <svg
@@ -140,31 +121,6 @@ export function Footer() {
                   />
                 </svg>
                 <span>info@acudimos.co</span>
-              </li>
-              <li className="flex items-start gap-3 text-gray-100">
-                <svg
-                  className="w-5 h-5 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                <div>
-                  <div>Av. 6 Norte #25-45</div>
-                  <div>Cali, Colombia</div>
-                </div>
               </li>
             </ul>
           </div>
@@ -201,7 +157,7 @@ export function Footer() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/573001234567"
+        href="https://api.whatsapp.com/send?phone=573114063090"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110 z-50"

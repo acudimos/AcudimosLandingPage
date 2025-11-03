@@ -11,8 +11,9 @@ import {
   Activity,
   Sparkles,
   HeartPulse,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -219,7 +220,14 @@ export function ServicesSection() {
             size="lg"
             className="max-w-[300px] bg-[#d8845f] text-white hover:bg-[#ddac8c] rounded-full px-8 py-3 h-auto whitespace-normal"
           >
-            Solicitar Consulta Gratuita
+            <Link
+              href="https://api.whatsapp.com/send?phone=573114063090"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              Solicitar Servicio Personalizado
+            </Link>
           </Button>
         </div>
       </div>
