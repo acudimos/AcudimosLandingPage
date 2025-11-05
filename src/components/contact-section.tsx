@@ -68,7 +68,7 @@ export function ContactSection() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-lg font-semibold text-gray-900">info@acudimos.co</p>
+                    <p className="text-lg font-semibold text-gray-900">acudimosadultos@gmail.com</p>
                     <p className="text-xs text-gray-500 mt-1">Respuesta en menos de 2 horas</p>
                   </div>
                 </div>
