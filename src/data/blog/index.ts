@@ -31,7 +31,7 @@ export const blogPosts: BlogPost[] = [
     categoryColor: "bg-teal-600 text-white",
     title: "La conexión humana en el cuidado: un valor que trasciende",
     description: "En una sociedad cada vez más digital, la conexión humana se vuelve esencial en el cuidado de las personas mayores. Descubre por qué el vínculo genuino es fundamental.",
-    image: "https://images.unsplash.com/photo-1603187864225-c70f80b406fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
+    image: "https://images.unsplash.com/photo-1652085648054-856f46de6198?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1053",
     author: "Equipo Acudimos",
     date: "1 Nov 2025",
     content: conexionHumanaContent
