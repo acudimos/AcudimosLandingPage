@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     categoryColor: "bg-teal-600 text-white",
     title: "Cuidar con amor: cómo acompañar a un adulto mayor sano o medianamente dependiente en casa",
     description: "En muchas familias llega un momento en el que los adultos mayores comienzan a necesitar un poco más de apoyo. No necesariamente porque estén enfermos, sino porque las tareas cotidianas pueden volverse un desafío.",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2070&auto=format&fit=crop",
+    image: "/services/service2.jpg",
     author: "Equipo Acudimos",
     date: "1 Nov 2025",
     content: cuidarConAmorContent
