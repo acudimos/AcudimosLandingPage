@@ -98,7 +98,7 @@ export function Navbar() {
               className="flex items-center"
             >
             <Phone className="w-4 h-4 mr-2" />
-            <span className="hidden xl:inline">Solicita tu acompañante hoy!</span>
+            <span className="hidden xl:inline">Solicita Tu Acompañante Hoy!</span>
             <span className="xl:hidden">Contactar</span>
           </Link>
         </Button>

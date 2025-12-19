@@ -130,18 +130,18 @@ export function HeroSection() {
         <CarouselNext className="right-4 bg-white/10 border-white/20 text-white hover:bg-white/20" />
       </Carousel>
 
-      {/* Floating Badge Bottom Right */}
+      {/* Floating Badge Bottom Right
       <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-20 hidden xl:block">
         <div className="bg-white rounded-full shadow-lg p-2 sm:p-3 md:p-4 flex items-center gap-2 md:gap-3">
           <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-[#d8845f] flex items-center justify-center">
-            <span className="text-white font-bold text-sm sm:text-base md:text-xl">A</span>
+            <span className="text-white font-bold text-sm sm:text-base md:text-xl">100+</span>
           </div>
           <div className="pr-1 sm:pr-2">
             <div className="font-semibold text-xs sm:text-sm text-gray-800 leading-tight">Profesionales Certificados</div>
             <div className="text-[10px] sm:text-xs text-gray-500">Personal especializado</div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
