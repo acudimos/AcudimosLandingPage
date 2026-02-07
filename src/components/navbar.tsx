@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,18 +61,21 @@ export function Navbar() {
           : ''
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+      <div className="mx-auto px-4 sm:px-6 py-4 lg:pb-4 lg:pt-3 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center z-50">
-            <span className="text-xl sm:text-2xl font-bold">
-              <span className={`${isScrolled ? 'text-[#586c78]' : 'text-white'}`}>Acudi</span>
-              <span className="text-[#d8845f]">mos</span>
-            </span>
+            <Image
+              src="/logo/logo-refactor.png"
+              alt="Acudimos"
+              width={120}
+              height={10}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation Links - Centered */}
-          <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
+          <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 md:mt-4 lg:mt-4">
             <div className={`flex space-x-6 xl:space-x-8 ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
               {menuItems.map((item) => (
                 <Link 
@@ -88,7 +92,7 @@ export function Navbar() {
 
           {/* Desktop Contact Button */}
           <Button
-            className="hidden lg:flex bg-[#d8845f] hover:bg-[#ddac8c] text-white rounded-full px-4 xl:px-6 text-sm xl:text-base"
+            className="hidden lg:flex bg-[#d8845f] hover:bg-[#ddac8c] text-white rounded-full px-4 xl:px-6 text-sm xl:text-base md:mt-3 lg:mt-3"
             size="lg"
           >
             <Link
