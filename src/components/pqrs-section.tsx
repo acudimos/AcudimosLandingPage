@@ -387,18 +387,20 @@ export function PQRSSection() {
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 mt-4">
                   <a
-                    href="mailto:pqrs@acudimos.com"
+                    href="mailto:info@acudimosadultos.com"
                     className="flex items-center justify-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-[#f5ede6] transition text-gray-700 text-sm"
                   >
                     <Mail className="w-4 h-4 text-[#d8845f]" />
-                    info@acudimos.co
+                    info@acudimosadultos.com
                   </a>
                   <a
-                    href="tel:+573001234567"
+                    href="https://api.whatsapp.com/send?phone=573114063090"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-[#f5ede6] transition text-gray-700 text-sm"
                   >
                     <Phone className="w-4 h-4 text-[#d8845f]" />
-                    +57 300 123 4567
+                    +57 311 406 3090
                   </a>
                 </div>
               </div>
