@@ -19,7 +19,7 @@ const slides = [
     badge: "Cuidado profesional y humano",
     title: "Cuidado que",
     titleHighlight: "transforma vidas",
-    description: "Brindamos servicios especializados de acompañamiento domiciliario con el profesionalismo médico y el calor humano que cada familia merece.",
+    description: "Ofrecemos acompañamiento domiciliario especializado, enfocado en el bienestar, la confianza y el trato humano que cada familia merece.",
   },
   {
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop",
@@ -33,7 +33,7 @@ const slides = [
     badge: "Experiencia y compromiso",
     title: "Compromiso con",
     titleHighlight: "tu bienestar",
-    description: "Más de 15 años de experiencia respaldando a familias en momentos importantes con profesionalismo y calidez humana.",
+    description: "Respaldamos a las familias en momentos importantes con profesionalismo, compromiso y calidez humana.",
   },
 ];
 
