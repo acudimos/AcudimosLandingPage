@@ -103,7 +103,7 @@ export function HeroSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                         data-gtag-conversion="whatsapp"
-                        className="flex items-center"
+                        className="flex items-center btn-wpp"
                       >
                         Agendar Servicio
                         <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 landscape:w-3 landscape:h-3" />

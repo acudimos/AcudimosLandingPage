@@ -202,7 +202,7 @@ export function ServicesSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-gtag-conversion="whatsapp"
-                    className="text-[#d8845f] hover:text-[#ddac8c] font-medium text-sm flex items-center group"
+                    className="text-[#d8845f] hover:text-[#ddac8c] font-medium text-sm flex items-center group btn-wpp"
                   >
                     <span>Más información</span>
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -232,7 +232,7 @@ export function ServicesSection() {
               target="_blank"
               rel="noopener noreferrer"
               data-gtag-conversion="whatsapp"
-              className="flex items-center"
+              className="flex items-center btn-wpp"
             >
               Solicitar Servicio Personalizado
             </Link>

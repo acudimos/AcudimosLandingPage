@@ -142,7 +142,7 @@ export function FAQSection() {
             target="_blank"
             rel="noopener noreferrer"
             data-gtag-conversion="whatsapp"
-            className="text-[#d8845f] hover:text-[#ddac8c] font-semibold inline-flex items-center gap-2 transition-colors"
+            className="text-[#d8845f] hover:text-[#ddac8c] font-semibold inline-flex items-center gap-2 transition-colors btn-wpp"
           >
           Contáctanos Directamente <HelpCircle className="w-5 h-5" />
           </Link>

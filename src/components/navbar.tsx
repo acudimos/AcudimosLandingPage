@@ -101,7 +101,7 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               data-gtag-conversion="whatsapp"
-              className="flex items-center"
+              className="flex items-center btn-wpp"
             >
               <Phone className="w-4 h-4 mr-2" />
               <span className="hidden xl:inline">Solicita Tu Acompañante Hoy!</span>
@@ -157,7 +157,7 @@ export function Navbar() {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-gtag-conversion="whatsapp"
-                    className="flex items-center"
+                    className="flex items-center btn-wpp"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Phone className="w-4 h-4 mr-2" />

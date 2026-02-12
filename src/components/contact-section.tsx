@@ -49,6 +49,7 @@ export function ContactSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                         data-gtag-conversion="whatsapp"
+                        className="btn-wpp"
                       >
                         +57 311 406 3090
                       </a>

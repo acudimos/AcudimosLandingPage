@@ -398,7 +398,7 @@ export function PQRSSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-gtag-conversion="whatsapp"
-                    className="flex items-center justify-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-[#f5ede6] transition text-gray-700 text-sm"
+                    className="flex items-center justify-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-[#f5ede6] transition text-gray-700 text-sm btn-wpp"
                   >
                     <Phone className="w-4 h-4 text-[#d8845f]" />
                     +57 311 406 3090
