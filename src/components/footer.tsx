@@ -181,6 +181,7 @@ export function Footer() {
         href="https://api.whatsapp.com/send?phone=573114063090"
         target="_blank"
         rel="noopener noreferrer"
+        data-gtag-conversion="whatsapp"
         className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110 z-50"
         aria-label="Chat en WhatsApp"
       >

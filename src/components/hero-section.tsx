@@ -93,14 +93,16 @@ export function HeroSection() {
 
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10 sm:mb-16 md:mb-20 landscape:mb-10 landscape:gap-2 px-4">
-                    <Button 
+                    <Button
                       size="lg"
                       className="bg-[#d8845f] hover:bg-[#ddac8c] text-white rounded-full px-6 sm:px-8 text-sm sm:text-base w-full sm:w-auto"
+                      asChild
                     >
                       <Link
                         href="https://api.whatsapp.com/send?phone=573114063090"
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-gtag-conversion="whatsapp"
                         className="flex items-center"
                       >
                         Agendar Servicio

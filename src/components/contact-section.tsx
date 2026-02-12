@@ -48,6 +48,7 @@ export function ContactSection() {
                         href="https://api.whatsapp.com/send?phone=573114063090"
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-gtag-conversion="whatsapp"
                       >
                         +57 311 406 3090
                       </a>

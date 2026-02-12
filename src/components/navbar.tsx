@@ -94,18 +94,20 @@ export function Navbar() {
           <Button
             className="hidden lg:flex bg-[#d8845f] hover:bg-[#ddac8c] text-white rounded-full px-4 xl:px-6 text-sm xl:text-base md:mt-3 lg:mt-3"
             size="lg"
+            asChild
           >
             <Link
               href="https://api.whatsapp.com/send?phone=573114063090"
               target="_blank"
               rel="noopener noreferrer"
+              data-gtag-conversion="whatsapp"
               className="flex items-center"
             >
-            <Phone className="w-4 h-4 mr-2" />
-            <span className="hidden xl:inline">Solicita Tu Acompañante Hoy!</span>
-            <span className="xl:hidden">Contactar</span>
-          </Link>
-        </Button>
+              <Phone className="w-4 h-4 mr-2" />
+              <span className="hidden xl:inline">Solicita Tu Acompañante Hoy!</span>
+              <span className="xl:hidden">Contactar</span>
+            </Link>
+          </Button>
 
           {/* Mobile Menu Button */}
           <button
@@ -148,13 +150,15 @@ export function Navbar() {
               <div className="pt-3 border-t border-white/20 mt-3">
                 <Button
                   className="cursor-pointer w-full bg-[#d8845f] hover:bg-[#ddac8c] text-white rounded-full py-5 text-sm font-semibold shadow-lg"
-                  onClick={() => setIsMenuOpen(false)}
+                  asChild
                 >
                   <Link
                     href="https://api.whatsapp.com/send?phone=573114063090"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-gtag-conversion="whatsapp"
                     className="flex items-center"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     <Phone className="w-4 h-4 mr-2" />
                     Solicita tu acompañante hoy!

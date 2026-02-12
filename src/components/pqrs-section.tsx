@@ -397,6 +397,7 @@ export function PQRSSection() {
                     href="https://api.whatsapp.com/send?phone=573114063090"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-gtag-conversion="whatsapp"
                     className="flex items-center justify-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-[#f5ede6] transition text-gray-700 text-sm"
                   >
                     <Phone className="w-4 h-4 text-[#d8845f]" />

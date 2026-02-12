@@ -197,17 +197,16 @@ export function ServicesSection() {
 
                 {/* Link - Siempre al fondo */}
                 <div className="flex-shrink-0 pt-4">
-                  <button className="text-[#d8845f] hover:text-[#ddac8c] font-medium text-sm flex items-center group">
-                    <Link
-                      href="https://api.whatsapp.com/send?phone=573114063090"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center"
-                    >
-                      <span className="">Más información</span>
-                    </Link>
+                  <Link
+                    href="https://api.whatsapp.com/send?phone=573114063090"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-gtag-conversion="whatsapp"
+                    className="text-[#d8845f] hover:text-[#ddac8c] font-medium text-sm flex items-center group"
+                  >
+                    <span>Más información</span>
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -226,11 +225,13 @@ export function ServicesSection() {
           <Button
             size="lg"
             className="max-w-[300px] bg-[#d8845f] text-white hover:bg-[#ddac8c] rounded-full px-8 py-3 h-auto whitespace-normal"
+            asChild
           >
             <Link
               href="https://api.whatsapp.com/send?phone=573114063090"
               target="_blank"
               rel="noopener noreferrer"
+              data-gtag-conversion="whatsapp"
               className="flex items-center"
             >
               Solicitar Servicio Personalizado
