@@ -4,6 +4,7 @@ import { Calendar, User, ArrowLeft } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 import { notFound } from "next/navigation";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { use } from "react";
@@ -98,6 +99,8 @@ export default function BlogPost({ params }: { params: Promise<{ slug: string }>
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }
