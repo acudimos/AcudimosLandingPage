@@ -1,4 +1,3 @@
-import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -26,9 +25,26 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
+
   return (
     <html lang="en">
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17948383754"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-ads-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = window.gtag || gtag;
+            gtag('js', new Date());
+            gtag('config', 'AW-17948383754');
+
+            ${gaMeasurementId.startsWith("G-") ? `gtag('config', '${gaMeasurementId}');` : ""}
+          `}
+        </Script>
         <Script id="gtag-conversion" strategy="afterInteractive">
           {`
             window.gtag_report_conversion = function (url, target) {
@@ -82,7 +98,6 @@ export default function RootLayout({
         <Analytics />
       
       </body>
-      <GoogleAnalytics  gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""} />
     </html>
   );
 }
