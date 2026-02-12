@@ -28,11 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-        <Analytics />
+      <head>
         <Script id="gtag-conversion" strategy="afterInteractive">
           {`
             window.gtag_report_conversion = function (url, target) {
@@ -78,6 +74,13 @@ export default function RootLayout({
             });
           `}
         </Script>
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+        <Analytics />
+      
       </body>
       <GoogleAnalytics  gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""} />
     </html>
