@@ -36,25 +36,35 @@ export default function RootLayout({
         <Script id="gtag-conversion" strategy="afterInteractive">
           {`
             window.gtag_report_conversion = function (url, target) {
+              if (typeof url === "undefined") {
+                return false;
+              }
+
+              var isBlank = target === "_blank";
+              if (isBlank) {
+                window.open(url, "_blank", "noopener,noreferrer");
+              }
+
               var callback = function () {
-                if (typeof url !== "undefined") {
-                  if (target === "_blank") {
-                    window.open(url, "_blank", "noopener,noreferrer");
-                  } else {
-                    window.location = url;
-                  }
+                if (!isBlank) {
+                  window.location = url;
                 }
               };
+
               if (typeof window.gtag === "function") {
-                window.gtag("event", "conversion", {
+                var payload = {
                   send_to: "AW-17948383754/v07hCKjaj_cbEIq0uu5C",
                   value: 1.0,
                   currency: "COP",
-                  event_callback: callback,
-                });
-              } else {
+                };
+                if (!isBlank) {
+                  payload.event_callback = callback;
+                }
+                window.gtag("event", "conversion", payload);
+              } else if (!isBlank) {
                 callback();
               }
+
               return false;
             };
 
