@@ -93,7 +93,7 @@ export function Navbar() {
             asChild
           >
             <Link
-              href="https://api.whatsapp.com/send?phone=573114063090"
+              href="https://api.whatsapp.com/send?phone=573114063090&text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
               target="_blank"
               rel="noopener noreferrer"
               data-gtag-conversion="whatsapp"
@@ -148,7 +148,7 @@ export function Navbar() {
                   asChild
                 >
                   <Link
-                    href="https://api.whatsapp.com/send?phone=573114063090"
+                    href="https://api.whatsapp.com/send?phone=573114063090&text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
                     target="_blank"
                     rel="noopener noreferrer"
                     data-gtag-conversion="whatsapp"
