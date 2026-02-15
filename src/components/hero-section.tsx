@@ -72,7 +72,7 @@ export function HeroSection() {
                         alt={slide.titleHighlight}
                         fill
                         sizes="100vw"
-                        quality={75}
+                        quality={index === 0 ? 65 : 55}
                         priority={index === 0}
                         loading={index === 0 ? "eager" : "lazy"}
                         className="object-cover"

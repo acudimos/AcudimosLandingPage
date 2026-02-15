@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,12 +53,10 @@ export function Navbar() {
   ];
 
   return (
-    <nav 
+    <nav
       ref={menuRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white shadow-md' 
-          : ''
+        isScrolled ? "bg-white shadow-md" : ""
       }`}
     >
       <div className="mx-auto px-4 sm:px-6 py-4 lg:pb-4 lg:pt-3 lg:px-8">
@@ -69,17 +67,19 @@ export function Navbar() {
               src="/logo/logo-refactor.png"
               alt="Acudimos"
               width={120}
-              height={10}
+              height={53}
               priority
             />
           </Link>
 
           {/* Desktop Navigation Links - Centered */}
           <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 md:mt-4 lg:mt-4">
-            <div className={`flex space-x-6 xl:space-x-8 ${isScrolled ? 'text-gray-800' : 'text-white'}`}>
+            <div
+              className={`flex space-x-6 xl:space-x-8 ${isScrolled ? "text-gray-800" : "text-white"}`}
+            >
               {menuItems.map((item) => (
-                <Link 
-                  key={item.label} 
+                <Link
+                  key={item.label}
                   href={item.href}
                   className="font-medium hover:text-[#d8845f] transition-colors text-sm xl:text-base relative group cursor-pointer whitespace-nowrap"
                 >
@@ -104,7 +104,9 @@ export function Navbar() {
               className="flex items-center btn-wpp"
             >
               <Phone className="w-4 h-4 mr-2" />
-              <span className="hidden xl:inline">Solicita Tu Acompañante Hoy!</span>
+              <span className="hidden xl:inline">
+                Solicita Tu Acompañante Hoy!
+              </span>
               <span className="xl:hidden">Contactar</span>
             </Link>
           </Button>
@@ -113,9 +115,9 @@ export function Navbar() {
           <button
             onClick={toggleMenu}
             className={`lg:hidden p-2 z-50 rounded-lg transition-colors ${
-              isScrolled 
-                ? 'text-gray-800 hover:bg-gray-200' 
-                : 'text-white hover:bg-white/10'
+              isScrolled
+                ? "text-gray-800 hover:bg-gray-200"
+                : "text-white hover:bg-white/10"
             }`}
             aria-label="Toggle menu"
           >
@@ -136,16 +138,16 @@ export function Navbar() {
                   key={item.label}
                   href={item.href}
                   className="block text-white font-medium py-2.5 px-4 hover:bg-[#d8845f]/20 hover:text-[#d8845f] rounded-lg transition-all duration-200 transform hover:translate-x-2 cursor-pointer"
-                  style={{ 
+                  style={{
                     animationDelay: `${index * 50}ms`,
-                    animation: 'slideIn 0.3s ease-out forwards'
+                    animation: "slideIn 0.3s ease-out forwards",
                   }}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
-              
+
               {/* Contact Button in Mobile Menu */}
               <div className="pt-3 border-t border-white/20 mt-3">
                 <Button

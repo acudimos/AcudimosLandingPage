@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -8,11 +8,6 @@ import type { Metadata } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -76,6 +71,14 @@ export default function RootLayout({
     <html lang="es">
       <head>
         {isProduction && (
+          <>
+            <link rel="preconnect" href="https://www.googletagmanager.com" />
+            <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+            <link rel="preconnect" href="https://va.vercel-scripts.com" />
+            <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
+          </>
+        )}
+        {isProduction && (
           <Script id="gtm" strategy="afterInteractive">
             {`
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -87,9 +90,7 @@ export default function RootLayout({
           </Script>
         )}
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} antialiased`}>
         {isProduction && (
           <noscript>
             <iframe
