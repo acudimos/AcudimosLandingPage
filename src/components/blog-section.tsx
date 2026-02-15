@@ -1,11 +1,9 @@
-"use client";
-
-import { Calendar, User, ArrowRight } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import { blogPosts } from "@/data/blog";
-import Link from "next/link";
+import { ArrowRight, Calendar, User } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export { blogPosts };
 
@@ -18,51 +16,68 @@ export function BlogSection() {
             Blog y Recursos
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-            Mantente informado con nuestros artículos especializados, consejos prácticos y las últimas
-            novedades en cuidado geriátrico.
+            Mantente informado con nuestros artículos especializados, consejos
+            prácticos y las últimas novedades en cuidado geriátrico.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-6xl mx-auto">
           {blogPosts.map((post, index) => (
-            <Link 
-              key={index}
-              href={`/blog/${post.slug}`}
-            >
-              <Card 
+            <Link key={index} href={`/blog/${post.slug}`}>
+              <Card
                 className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white cursor-pointer h-full"
-                style={{ viewTransitionName: `blog-card-${post.slug}` } as React.CSSProperties}
+                style={
+                  {
+                    viewTransitionName: `blog-card-${post.slug}`,
+                  } as React.CSSProperties
+                }
               >
-                <div 
+                <div
                   className="relative h-64 overflow-hidden"
-                  style={{ viewTransitionName: `blog-image-${post.slug}` } as React.CSSProperties}
+                  style={
+                    {
+                      viewTransitionName: `blog-image-${post.slug}`,
+                    } as React.CSSProperties
+                  }
                 >
                   <Image
                     src={post.image}
                     alt={post.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={75}
                     className="object-cover"
                   />
-                  <Badge className={`absolute top-4 left-4 ${post.categoryColor} hover:${post.categoryColor} rounded-full px-3 py-1 border-0`}>
+                  <Badge
+                    className={`absolute top-4 left-4 ${post.categoryColor} hover:${post.categoryColor} rounded-full px-3 py-1 border-0`}
+                  >
                     {post.category}
                   </Badge>
                 </div>
-                
+
                 <CardContent className="p-6">
-                  <h3 
+                  <h3
                     className="text-xl font-bold text-gray-900 mb-3 leading-tight"
-                    style={{ viewTransitionName: `blog-title-${post.slug}` } as React.CSSProperties}
+                    style={
+                      {
+                        viewTransitionName: `blog-title-${post.slug}`,
+                      } as React.CSSProperties
+                    }
                   >
                     {post.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 mb-4 leading-relaxed text-sm">
                     {post.description}
                   </p>
-                  
-                  <div 
+
+                  <div
                     className="flex items-center justify-between text-xs text-gray-500 mb-4 pb-4 border-b border-gray-100"
-                    style={{ viewTransitionName: `blog-meta-${post.slug}` } as React.CSSProperties}
+                    style={
+                      {
+                        viewTransitionName: `blog-meta-${post.slug}`,
+                      } as React.CSSProperties
+                    }
                   >
                     <div className="flex items-center gap-1">
                       <User className="w-3 h-3" />

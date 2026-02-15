@@ -60,7 +60,6 @@ export function Navbar() {
     >
       <div className="mx-auto px-4 sm:px-6 py-4 lg:pb-4 lg:pt-3 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="flex items-center z-50">
             <Image
               src="/logo/logo-refactor.png"
@@ -71,7 +70,6 @@ export function Navbar() {
             />
           </Link>
 
-          {/* Desktop Navigation Links - Centered */}
           <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 md:mt-4 lg:mt-4">
             <div
               className={`flex space-x-6 xl:space-x-8 ${isScrolled ? "text-gray-800" : "text-white"}`}
@@ -89,7 +87,6 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* Desktop Contact Button */}
           <Button
             className="hidden lg:flex bg-[#d8845f] hover:bg-[#ddac8c] text-white rounded-full px-4 xl:px-6 text-sm xl:text-base md:mt-3 lg:mt-3"
             size="lg"
@@ -110,7 +107,6 @@ export function Navbar() {
             </Link>
           </Button>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
             className={`lg:hidden p-2 z-50 rounded-lg transition-colors ${
@@ -128,7 +124,6 @@ export function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-[#586c78] to-[#3d4f59] backdrop-blur-lg shadow-2xl border-t border-white/10 max-h-[calc(100vh-80px)] overflow-y-auto">
             <div className="container mx-auto px-6 py-6 pb-8 space-y-2">
@@ -147,7 +142,6 @@ export function Navbar() {
                 </Link>
               ))}
 
-              {/* Contact Button in Mobile Menu */}
               <div className="pt-3 border-t border-white/20 mt-3">
                 <Button
                   className="cursor-pointer w-full bg-[#d8845f] hover:bg-[#ddac8c] text-white rounded-full py-5 text-sm font-semibold shadow-lg"

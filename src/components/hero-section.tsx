@@ -9,37 +9,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { slides } from "@/data/hero/slides";
 import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight, Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-const slides = [
-  {
-    image: "/hero/professional-care.webp",
-    badge: "Cuidado profesional y humano",
-    title: "Cuidado domiciliario",
-    titleHighlight: "que transforma vidas",
-    description:
-      "Ofrecemos acompañamiento domiciliario especializado, enfocado en el bienestar, la confianza y el trato humano que cada familia merece.",
-  },
-  {
-    image: "/hero/personalized-attention.webp",
-    badge: "Atención personalizada",
-    title: "Servicios de",
-    titleHighlight: "alta calidad",
-    description:
-      "Nuestro equipo de profesionales certificados brinda atención personalizada las 24 horas del día, los 7 días de la semana.",
-  },
-  {
-    image: "/hero/commitment-to-wellbeing.webp",
-    badge: "Experiencia y compromiso",
-    title: "Compromiso con",
-    titleHighlight: "tu bienestar",
-    description:
-      "Respaldamos a las familias en momentos importantes con profesionalismo, compromiso y calidez humana.",
-  },
-];
 
 export function HeroSection() {
   return (
@@ -72,7 +46,7 @@ export function HeroSection() {
                         alt={slide.titleHighlight}
                         fill
                         sizes="100vw"
-                        quality={index === 0 ? 65 : 55}
+                        quality={index === 0 ? 75 : 55}
                         priority={index === 0}
                         loading={index === 0 ? "eager" : "lazy"}
                         className="object-cover"

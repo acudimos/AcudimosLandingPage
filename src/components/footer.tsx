@@ -1,3 +1,4 @@
+import { Heart, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
@@ -63,35 +64,11 @@ export function Footer() {
             <h3 className="text-xl font-semibold mb-4">Contacto</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-gray-100">
-                <svg
-                  className="w-5 h-5 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
+                <Phone className="w-5 h-5 flex-shrink-0" />
                 <span>+57 311 406 3090</span>
               </li>
               <li className="flex items-center gap-3 text-gray-100">
-                <svg
-                  className="w-5 h-5 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
+                <Mail className="w-5 h-5 flex-shrink-0" />
                 <span>info@acudimosadultos.com</span>
               </li>
             </ul>
@@ -101,18 +78,8 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-teal-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2 text-gray-100 text-sm">
-            <svg
-              className="w-5 h-5 text-red-400"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <span>© 2025 Acudimos. Todos los derechos reservados.</span>
+            <Heart className="w-4 h-4 text-red-500" />
+            <span>© 2026 Acudimos. Todos los derechos reservados.</span>
           </div>
           <div className="flex gap-6 text-sm">
             <a

@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Clock, Mail, Phone } from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -7,7 +8,6 @@ export function ContactSection() {
       className="py-20 bg-gradient-to-b from-gray-50 to-white"
     >
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Contáctanos</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -17,26 +17,12 @@ export function ContactSection() {
         </div>
 
         <div className="grid lg:grid-cols-[1fr,1.5fr] gap-8 max-w-6xl mx-auto">
-          {/* Contact Info Cards */}
           <div className="space-y-6">
-            {/* Phone Card */}
             <Card className="bg-white border-gray-200">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-5 h-5 text-blue-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      />
-                    </svg>
+                    <Phone className="w-5 h-5 text-blue-600" />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-900 mb-1">
@@ -62,24 +48,11 @@ export function ContactSection() {
               </CardContent>
             </Card>
 
-            {/* Email Card */}
             <Card className="bg-white border-gray-200">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-5 h-5 text-blue-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
+                    <Mail className="w-5 h-5 text-blue-600" />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
@@ -94,24 +67,11 @@ export function ContactSection() {
               </CardContent>
             </Card>
 
-            {/* Hours Card */}
             <Card className="bg-white border-gray-200">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-5 h-5 text-blue-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
+                    <Clock className="w-5 h-5 text-blue-600" />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-900 mb-3">

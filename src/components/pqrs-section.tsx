@@ -120,7 +120,6 @@ export function PQRSSection() {
   return (
     <section id="pqrs" className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        {/* Header */}
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-[#d8845f] text-white hover:bg-[#ddac8c] rounded-full px-4 py-1 border-0">
             Tu Voz es Importante
@@ -136,7 +135,6 @@ export function PQRSSection() {
           </p>
         </div>
 
-        {/* PQRS Types Grid */}
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           {pqrsTypes.map((type) => {
             const Icon = type.icon;
@@ -160,8 +158,6 @@ export function PQRSSection() {
             );
           })}
         </div>
-
-        {/* Form Section */}
         <div className="max-w-2xl mx-auto">
           <Card className="border-gray-200">
             <CardContent className="p-8">
@@ -175,7 +171,6 @@ export function PQRSSection() {
                   </div>
                 </div>
               )}
-
               {error && (
                 <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
                   <div className="flex items-start gap-2 text-red-700">
@@ -193,9 +188,7 @@ export function PQRSSection() {
                   </div>
                 </div>
               )}
-
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name */}
                 <div>
                   <label
                     htmlFor="name"
@@ -215,8 +208,6 @@ export function PQRSSection() {
                     placeholder="Tu nombre"
                   />
                 </div>
-
-                {/* Email */}
                 <div>
                   <label
                     htmlFor="email"
@@ -236,8 +227,6 @@ export function PQRSSection() {
                     placeholder="tu@email.com"
                   />
                 </div>
-
-                {/* Identification */}
                 <div>
                   <label
                     htmlFor="identification"
@@ -257,8 +246,6 @@ export function PQRSSection() {
                     placeholder="1234567890"
                   />
                 </div>
-
-                {/* Phone */}
                 <div>
                   <label
                     htmlFor="phone"
@@ -278,8 +265,6 @@ export function PQRSSection() {
                     placeholder="+57 300 000 0000"
                   />
                 </div>
-
-                {/* Type */}
                 <div>
                   <label
                     htmlFor="type"
@@ -301,8 +286,6 @@ export function PQRSSection() {
                     <option value="sugerencia">Sugerencia</option>
                   </select>
                 </div>
-
-                {/* Subject */}
                 <div>
                   <label
                     htmlFor="subject"
@@ -322,8 +305,6 @@ export function PQRSSection() {
                     placeholder="Asunto de tu solicitud"
                   />
                 </div>
-
-                {/* Message */}
                 <div>
                   <label
                     htmlFor="message"
@@ -343,8 +324,6 @@ export function PQRSSection() {
                     placeholder="Cuéntanos con detalle tu solicitud..."
                   />
                 </div>
-
-                {/* Submit Button */}
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -380,7 +359,6 @@ export function PQRSSection() {
                 </Button>
               </form>
 
-              {/* Info Footer */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <p className="text-sm text-gray-600 text-center">
                   También puedes contactarnos directamente:
