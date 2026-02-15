@@ -2,22 +2,22 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-    Activity,
-    ArrowRight,
-    Brain,
-    HeartPulse,
-    Home,
-    MessageCircle,
-    Palette,
-    Smartphone,
-    Sparkles,
-    Users,
+  Activity,
+  ArrowRight,
+  Brain,
+  HeartPulse,
+  Home,
+  MessageCircle,
+  Palette,
+  Smartphone,
+  Sparkles,
+  Users,
 } from "lucide-react";
 import Link from "next/link";
 
 const services = [
   {
-    icon: Home, // Casa en lugar de reloj
+    icon: Home,
     title: "Acompañamiento en el Hogar",
     description:
       "Atención profesional en la comodidad del hogar, manteniendo el entorno familiar.",
@@ -32,7 +32,7 @@ const services = [
     iconBg: "bg-blue-100",
   },
   {
-    icon: Users, // Personas para actividades sociales
+    icon: Users,
     title: "Compañía en Actividades Sociales y Cotidianas",
     description:
       "Acompañamiento personal en tu día a día: desde gestiones rutinarias hasta actividades sociales, siempre con una compañía que te apoya y motiva.",
@@ -48,7 +48,7 @@ const services = [
     iconBg: "bg-gray-100",
   },
   {
-    icon: HeartPulse, // Mantenemos este - es perfecto para salud
+    icon: HeartPulse,
     title: "Bienestar y Salud",
     description:
       "Cuidado integral no médico: actividad física, bienestar emocional y hábitos saludables para tu calidad de vida.",
@@ -63,7 +63,7 @@ const services = [
     iconBg: "bg-red-100",
   },
   {
-    icon: MessageCircle, // Comunicación para apoyo familiar
+    icon: MessageCircle,
     title: "Apoyo a la Familia",
     description:
       "Tu enlace de confianza: reportes periódicos, orientación profesional y comunicación constante para la tranquilidad familiar.",
@@ -77,7 +77,7 @@ const services = [
     iconBg: "bg-blue-100",
   },
   {
-    icon: Palette, // Arte para experiencias creativas
+    icon: Palette,
     title: "Club de Experiencias",
     description:
       "Revivimos momentos especiales y creamos nuevos recuerdos through talleres creativos, sesiones de cine en casa y la preservación digital de tus historias familiares más valiosas.",
@@ -91,7 +91,7 @@ const services = [
     iconBg: "bg-gray-100",
   },
   {
-    icon: Smartphone, // Dispositivo para conexión digital
+    icon: Smartphone,
     title: "Conexión Digital",
     description:
       "Acortamos distancias y fortalecemos lazos familiares. Te ayudamos con videollamadas, enseñamos el uso de dispositivos y creamos diarios digitales para mantener viva la conexión con tus seres queridos.",
@@ -105,7 +105,7 @@ const services = [
     iconBg: "bg-red-100",
   },
   {
-    icon: Activity, // Actividad física
+    icon: Activity,
     title: "Vida Activa y Recreativa",
     description:
       "Mantenemos tu cuerpo y mente en movimiento through caminatas al aire libre, clases de baile divertidas y juegos que desafían tu creatividad, para una vida llena de energía y alegría.",
@@ -119,7 +119,7 @@ const services = [
     iconBg: "bg-blue-100",
   },
   {
-    icon: Brain, // Cerebro para bienestar emocional
+    icon: Brain,
     title: "Bienestar Emocional",
     description:
       "Fortalecemos tu salud emocional con sesiones de conversación terapéutica, música relajante, risoterapia y ejercicios de gratitud para mejorar tu calidad de vida.",
@@ -133,7 +133,7 @@ const services = [
     iconBg: "bg-gray-100",
   },
   {
-    icon: Sparkles, // Chispas para talentos
+    icon: Sparkles,
     title: "Estimulación y Talentos Compartidos",
     description:
       "En Acudimos, creemos que cada persona tiene una historia y un talento que merece seguir vivo. Por eso, durante el acompañamiento, buscamos resaltar las capacidades, intereses y habilidades tanto del adulto como de su cuidador, convirtiendo cada visita en un espacio de disfrute, aprendizaje y conexión.",

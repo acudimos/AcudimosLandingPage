@@ -13,7 +13,6 @@ export function Navbar() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Cerrar el menú al hacer clic fuera
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
