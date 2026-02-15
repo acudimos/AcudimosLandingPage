@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Geist } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -73,6 +74,8 @@ export default function RootLayout({
           <>
             <link rel="preconnect" href="https://www.googletagmanager.com" />
             <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+            <link rel="preconnect" href="https://va.vercel-scripts.com" />
+            <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
           </>
         )}
         {isProduction && (
@@ -100,6 +103,7 @@ export default function RootLayout({
         )}
         {children}
         {isProduction && <Analytics />}
+        {isProduction && <SpeedInsights />}
       </body>
     </html>
   );
