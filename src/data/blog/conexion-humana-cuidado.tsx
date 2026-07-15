@@ -27,16 +27,12 @@ export const content = (
       la sensación de ser escuchados, recordados, importantes.
     </p>
 
-    <h2>La importancia de contar nuestra historia</h2>
-
     <p>
       Pero todos llevamos dentro una historia que merece ser contada. Cada persona conserva en su memoria vivencias, 
       emociones y aprendizajes que solo cobran sentido cuando son compartidos. Escuchar y ser escuchado nos vincula 
       con nuestra esencia más profunda. Nos recuerda que somos seres sociales, que desde el origen de la humanidad 
       aprendimos a sobrevivir y a crecer juntos, conversando, mirándonos, acompañándonos.
     </p>
-
-    <h2>El cuidado como conexión genuina</h2>
 
     <p>
       Por eso, en el ámbito del cuidado, la tecnología y la eficiencia no pueden ser suficientes. Cuidar es también 

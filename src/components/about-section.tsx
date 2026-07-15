@@ -110,7 +110,7 @@ export function AboutSection() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/about/about-img.webp"
+                src="/hero/national-cancer-institute-BxXgTQEw1M4-unsplash.jpg"
                 alt="Equipo médico de Acudimos"
                 width={600}
                 height={500}
