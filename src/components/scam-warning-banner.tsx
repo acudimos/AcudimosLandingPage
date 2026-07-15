@@ -30,7 +30,7 @@ export function ScamWarningBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 flex justify-center px-3 pb-3 sm:px-4 sm:pb-4">
+    <div className="fixed inset-x-0 bottom-0 z-40 flex justify-center px-3 pb-24 sm:px-6">
       <div className="flex w-full max-w-3xl items-start gap-3 rounded-xl border border-amber-200 bg-amber-50/95 px-4 py-3 shadow-lg backdrop-blur-sm">
         <ShieldAlert className="mt-0.5 size-5 shrink-0 text-amber-600" />
         <p className="text-xs leading-relaxed text-amber-900 sm:text-sm">

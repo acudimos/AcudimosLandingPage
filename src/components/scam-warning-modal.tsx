@@ -64,9 +64,9 @@ export function ScamWarningModal() {
           <X className="size-5" />
         </button>
 
-        <div className="flex items-center gap-3 bg-destructive px-6 py-5 text-white">
+        <div className="flex items-center gap-3 bg-destructive py-5 pl-6 pr-12 text-white sm:justify-center sm:pl-12">
           <AlertTriangle className="size-8 shrink-0" />
-          <h2 id="scam-warning-title" className="text-xl font-bold sm:text-2xl">
+          <h2 id="scam-warning-title" className="text-lg font-bold sm:text-2xl">
             ¡No te dejes estafar!
           </h2>
         </div>
@@ -109,14 +109,18 @@ export function ScamWarningModal() {
             información o realizar pagos.
           </p>
 
-          <Button asChild className="mt-4 w-full" size="lg">
+          <Button
+            asChild
+            className="mt-4 h-auto w-full whitespace-normal py-3 text-center text-sm leading-tight sm:text-base"
+            size="lg"
+          >
             <a
               href={`https://wa.me/${OFFICIAL_WHATSAPP}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="size-5" />
-              WhatsApp oficial {OFFICIAL_WHATSAPP_DISPLAY}
+              <MessageCircle className="size-5 shrink-0" />
+              <span>WhatsApp oficial {OFFICIAL_WHATSAPP_DISPLAY}</span>
             </a>
           </Button>
 

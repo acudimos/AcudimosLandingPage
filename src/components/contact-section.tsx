@@ -24,7 +24,7 @@ export function ContactSection() {
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-5 h-5 text-blue-600" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className="font-semibold text-gray-900 mb-1">
                       Teléfono
                     </h3>
@@ -54,9 +54,9 @@ export function ContactSection() {
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-blue-600" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-lg font-semibold text-gray-900">
+                    <p className="text-base sm:text-lg font-semibold text-gray-900 break-all">
                       info@acudimosadultos.com
                     </p>
                     <p className="text-xs text-gray-500 mt-1">
@@ -73,24 +73,24 @@ export function ContactSection() {
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5 text-blue-600" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className="font-semibold text-gray-900 mb-3">
                       Horarios
                     </h3>
                     <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
+                      <div className="flex justify-between gap-2">
                         <span className="text-gray-600">Lun - Vie:</span>
                         <span className="text-gray-900 font-medium">
                           7:00 AM - 7:00 PM
                         </span>
                       </div>
-                      <div className="flex justify-between">
+                      <div className="flex justify-between gap-2">
                         <span className="text-gray-600">Sábados:</span>
                         <span className="text-gray-900 font-medium">
                           8:00 AM - 4:00 PM
                         </span>
                       </div>
-                      <div className="flex justify-between">
+                      <div className="flex justify-between gap-2">
                         <span className="text-gray-600">Emergencias:</span>
                         <span className="text-gray-900 font-medium">24/7</span>
                       </div>
