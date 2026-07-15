@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import emailjs from "@emailjs/browser";
 import {
-  AlertCircle,
-  CheckCircle,
-  Mail,
-  MessageSquare,
-  Phone,
+    AlertCircle,
+    CheckCircle,
+    Mail,
+    MessageSquare,
+    Phone,
 } from "lucide-react";
 import { useState } from "react";
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_CONFIG_SERVICE_ID!;
