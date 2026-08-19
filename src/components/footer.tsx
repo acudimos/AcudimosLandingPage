@@ -1,3 +1,10 @@
+/*
+ * Los enlaces a servicios usan <a> nativo a propósito: el <Link> de Next navega
+ * con pushState y eso no dispara `hashchange`, que es lo que la sección de
+ * servicios escucha para abrir el servicio correcto.
+ */
+import { ScrollToTop } from "@/components/scroll-to-top";
+import { serviceCategories } from "@/data/services/services";
 import { WHATSAPP_DISPLAY, whatsappLink } from "@/lib/whatsapp";
 import { Heart, Mail, Phone } from "lucide-react";
 import Link from "next/link";
@@ -76,6 +83,32 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Servicios */}
+        <div className="border-t border-teal-800 pt-10 mb-8">
+          <h3 className="text-xl font-semibold mb-6">Servicios</h3>
+          <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-8 [column-fill:balance]">
+            {serviceCategories.map((category) => (
+              <div key={category.id} className="break-inside-avoid mb-6">
+                <p className="text-[11px] font-bold uppercase tracking-wide text-[#ddac8c] mb-2">
+                  {category.label}
+                </p>
+                <ul className="space-y-1">
+                  {category.services.map((service) => (
+                    <li key={service.slug}>
+                      <a
+                        href={`/#servicio-${service.slug}`}
+                        className="text-[13px] leading-snug text-gray-200 hover:text-white transition-colors inline-block"
+                      >
+                        {service.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div className="border-t border-teal-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2 text-gray-100 text-sm">
@@ -98,6 +131,8 @@ export function Footer() {
           </div>
         </div>
       </div>
+
+      <ScrollToTop />
 
       {/* WhatsApp Floating Button */}
       <a

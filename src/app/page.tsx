@@ -8,7 +8,6 @@ import { Navbar } from "@/components/navbar";
 import { PartnersSection } from "@/components/partners-section";
 import { PaymentMethodsSection } from "@/components/payment-methods-section";
 import { PQRSSection } from "@/components/pqrs-section";
-import { ScamWarningBanner } from "@/components/scam-warning-banner";
 import { ServicesSection } from "@/components/services-section";
 import type { Metadata } from "next";
 
@@ -24,7 +23,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <ScamWarningBanner />
       <Navbar />
       <main>
         <HeroSection />

@@ -1,5 +1,11 @@
 "use client";
 
+import {
+  ServicesMegaPanel,
+  ServicesMobileMenu,
+  ServicesNavTrigger,
+  useServicesMenu,
+} from "@/components/services-mega-menu";
 import { Button } from "@/components/ui/button";
 import { whatsappLink } from "@/lib/whatsapp";
 import { Menu, Phone, X } from "lucide-react";
@@ -11,6 +17,7 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const servicesMenu = useServicesMenu();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -46,7 +53,8 @@ export function Navbar() {
   const menuItems = [
     { label: "Inicio", href: "/#hero" },
     { label: "Quiénes Somos", href: "/#about" },
-    { label: "Servicios", href: "/#services" },
+    // "Servicios" se renderiza aparte: despliega el mega menú al pasar el mouse.
+    { label: "Servicios", href: "/#services", megaMenu: true },
     { label: "Blog", href: "/#blog" },
     { label: "Preguntas Frecuentes", href: "/#faq" },
     { label: "Contacto", href: "/#contact" },
@@ -75,16 +83,20 @@ export function Navbar() {
             <div
               className={`flex space-x-6 xl:space-x-8 ${isScrolled ? "text-gray-800" : "text-white"}`}
             >
-              {menuItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="font-medium hover:text-[#d8845f] transition-colors text-sm xl:text-base relative group cursor-pointer whitespace-nowrap"
-                >
-                  {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#d8845f] transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))}
+              {menuItems.map((item) =>
+                item.megaMenu ? (
+                  <ServicesNavTrigger key={item.label} menu={servicesMenu} />
+                ) : (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="font-medium hover:text-[#d8845f] transition-colors text-sm xl:text-base relative group cursor-pointer whitespace-nowrap"
+                  >
+                    {item.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#d8845f] transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                )
+              )}
             </div>
           </div>
 
@@ -131,18 +143,27 @@ export function Navbar() {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-[#586c78] to-[#3d4f59] backdrop-blur-lg shadow-2xl border-t border-white/10 max-h-[calc(100vh-80px)] overflow-y-auto">
             <div className="container mx-auto px-6 py-6 pb-8 space-y-2">
               {menuItems.map((item, index) => (
-                <Link
+                <div
                   key={item.label}
-                  href={item.href}
-                  className="block text-white font-medium py-2.5 px-4 hover:bg-[#d8845f]/20 hover:text-[#d8845f] rounded-lg transition-all duration-200 transform hover:translate-x-2 cursor-pointer"
                   style={{
                     animationDelay: `${index * 50}ms`,
                     animation: "slideIn 0.3s ease-out forwards",
                   }}
-                  onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.label}
-                </Link>
+                  {item.megaMenu ? (
+                    <ServicesMobileMenu
+                      onNavigate={() => setIsMenuOpen(false)}
+                    />
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="block text-white font-medium py-2.5 px-4 hover:bg-[#d8845f]/20 hover:text-[#d8845f] rounded-lg transition-all duration-200 transform hover:translate-x-2 cursor-pointer"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                </div>
               ))}
 
               <div className="pt-3 border-t border-white/20 mt-3">
@@ -169,6 +190,9 @@ export function Navbar() {
           </div>
         )}
       </div>
+
+      {/* Fuera del contenedor con padding: ocupa el ancho completo de la pantalla */}
+      <ServicesMegaPanel menu={servicesMenu} />
     </nav>
   );
 }
