@@ -10,6 +10,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { slides } from "@/data/hero/slides";
+import { whatsappLink } from "@/lib/whatsapp";
 import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight, Heart } from "lucide-react";
 import Image from "next/image";
@@ -86,7 +87,9 @@ export function HeroSection() {
                           asChild
                         >
                           <Link
-                            href="https://api.whatsapp.com/send?phone=573114063090&text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+                            href={whatsappLink(
+                              "Hola, quiero agendar un servicio de acompañamiento con Acudimos."
+                            )}
                             target="_blank"
                             rel="noopener noreferrer"
                             data-gtag-conversion="whatsapp"

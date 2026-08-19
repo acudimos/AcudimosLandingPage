@@ -9,7 +9,6 @@ import { PartnersSection } from "@/components/partners-section";
 import { PaymentMethodsSection } from "@/components/payment-methods-section";
 import { PQRSSection } from "@/components/pqrs-section";
 import { ScamWarningBanner } from "@/components/scam-warning-banner";
-import { ScamWarningModal } from "@/components/scam-warning-modal";
 import { ServicesSection } from "@/components/services-section";
 import type { Metadata } from "next";
 
@@ -25,7 +24,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <ScamWarningModal />
       <ScamWarningBanner />
       <Navbar />
       <main>

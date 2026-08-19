@@ -1,12 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_DISPLAY, whatsappLink } from "@/lib/whatsapp";
 import { AlertTriangle, MessageCircle, ShieldCheck, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "acudimos-scam-warning-seen";
-const OFFICIAL_WHATSAPP = "573114063090";
-const OFFICIAL_WHATSAPP_DISPLAY = "+57 311 406 3090";
 
 export function ScamWarningModal() {
   const [open, setOpen] = useState(false);
@@ -115,12 +114,14 @@ export function ScamWarningModal() {
             size="lg"
           >
             <a
-              href={`https://wa.me/${OFFICIAL_WHATSAPP}`}
+              href={whatsappLink(
+                "Hola, quiero verificar que estoy hablando con el WhatsApp oficial de Acudimos."
+              )}
               target="_blank"
               rel="noopener noreferrer"
             >
               <MessageCircle className="size-5 shrink-0" />
-              <span>WhatsApp oficial {OFFICIAL_WHATSAPP_DISPLAY}</span>
+              <span>WhatsApp oficial {WHATSAPP_DISPLAY}</span>
             </a>
           </Button>
 

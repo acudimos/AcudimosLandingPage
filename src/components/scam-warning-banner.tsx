@@ -1,5 +1,6 @@
 "use client";
 
+import { WHATSAPP_DISPLAY, whatsappLink } from "@/lib/whatsapp";
 import { ShieldAlert, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -37,12 +38,14 @@ export function ScamWarningBanner() {
           ACUDIMOS S.A.S. no ofrece empleos, subsidios ni solicita pagos por
           contratación. Solo prestamos cuidado de adultos mayores.{" "}
           <a
-            href="https://wa.me/573114063090"
+            href={whatsappLink(
+              "Hola, quiero verificar que estoy hablando con el WhatsApp oficial de Acudimos."
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-amber-700 underline underline-offset-2 hover:text-amber-800"
           >
-            WhatsApp oficial +57 311 406 3090
+            WhatsApp oficial {WHATSAPP_DISPLAY}
           </a>
         </p>
         <button
