@@ -3,6 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { faqs } from "@/data/faqs/faqs";
+import { whatsappLink } from "@/lib/whatsapp";
 import { HelpCircle, Minus, Plus } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -76,7 +77,9 @@ export function FAQSection() {
             ¿No encontraste la respuesta que buscabas?
           </p>
           <Link
-            href="https://api.whatsapp.com/send?phone=573114063090&text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+            href={whatsappLink(
+              "Hola, tengo una pregunta que no encontré en las preguntas frecuentes."
+            )}
             target="_blank"
             rel="noopener noreferrer"
             data-gtag-conversion="whatsapp"

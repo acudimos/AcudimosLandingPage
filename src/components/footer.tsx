@@ -1,3 +1,4 @@
+import { WHATSAPP_DISPLAY, whatsappLink } from "@/lib/whatsapp";
 import { Heart, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
@@ -65,7 +66,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-gray-100">
                 <Phone className="w-5 h-5 flex-shrink-0" />
-                <span>+57 311 406 3090</span>
+                <span>{WHATSAPP_DISPLAY}</span>
               </li>
               <li className="flex items-center gap-3 text-gray-100">
                 <Mail className="w-5 h-5 flex-shrink-0" />
@@ -100,7 +101,9 @@ export function Footer() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://api.whatsapp.com/send?phone=573114063090&text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+        href={whatsappLink(
+          "Hola, quiero más información sobre los servicios de Acudimos."
+        )}
         target="_blank"
         rel="noopener noreferrer"
         data-gtag-conversion="whatsapp"

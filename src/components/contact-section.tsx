@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { WHATSAPP_DISPLAY, whatsappLink } from "@/lib/whatsapp";
 import { Clock, Mail, Phone } from "lucide-react";
 
 export function ContactSection() {
@@ -31,13 +32,15 @@ export function ContactSection() {
                     <p className="text-sm text-gray-600 mb-2">Línea Nacional</p>
                     <p className="text-lg font-semibold text-gray-900">
                       <a
-                        href="https://api.whatsapp.com/send?phone=573114063090&text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+                        href={whatsappLink(
+                          "Hola, quiero comunicarme con Acudimos para recibir información sobre sus servicios."
+                        )}
                         target="_blank"
                         rel="noopener noreferrer"
                         data-gtag-conversion="whatsapp"
                         className="btn-wpp"
                       >
-                        +57 311 406 3090
+                        {WHATSAPP_DISPLAY}
                       </a>
                     </p>
                     <p className="text-xs text-gray-500 mt-1">

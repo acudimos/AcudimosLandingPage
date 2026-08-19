@@ -3,6 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { WHATSAPP_DISPLAY, whatsappLink } from "@/lib/whatsapp";
 import emailjs from "@emailjs/browser";
 import {
     AlertCircle,
@@ -372,14 +373,16 @@ export function PQRSSection() {
                     info@acudimosadultos.com
                   </a>
                   <a
-                    href="https://api.whatsapp.com/send?phone=573114063090&text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+                    href={whatsappLink(
+                      "Hola, quiero radicar una PQRS con Acudimos."
+                    )}
                     target="_blank"
                     rel="noopener noreferrer"
                     data-gtag-conversion="whatsapp"
                     className="flex items-center justify-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-[#f5ede6] transition text-gray-700 text-sm btn-wpp"
                   >
                     <Phone className="w-4 h-4 text-[#d8845f]" />
-                    +57 311 406 3090
+                    {WHATSAPP_DISPLAY}
                   </a>
                 </div>
               </div>
